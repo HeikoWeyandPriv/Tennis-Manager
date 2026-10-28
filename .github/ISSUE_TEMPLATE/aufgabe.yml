@@ -1,0 +1,42 @@
+name: Aufgabe
+description: Eine umsetzbare Aufgabe (Feature, Umbau, Infrastruktur)
+title: "[Aufgabe] "
+labels: ["typ:feature"]
+body:
+  - type: textarea
+    id: ziel
+    attributes:
+      label: Ziel
+      description: Was soll nach dieser Aufgabe möglich sein, und warum?
+    validations:
+      required: true
+  - type: textarea
+    id: bezug
+    attributes:
+      label: Bezug zu Design und Architektur
+      description: Welche Design-Dokumente und ADRs gelten für diese Aufgabe?
+      placeholder: |
+        - docs/design/02-punktsimulation.md – Abschnitt Schlagauflösung
+        - ADR 0002
+    validations:
+      required: true
+  - type: textarea
+    id: akzeptanz
+    attributes:
+      label: Akzeptanzkriterien
+      description: Woran erkennt man, dass die Aufgabe erledigt ist? Möglichst prüfbar formulieren.
+      placeholder: |
+        - [ ] ...
+        - [ ] Tests vorhanden und grün
+    validations:
+      required: true
+  - type: textarea
+    id: ausserhalb
+    attributes:
+      label: Nicht Teil dieser Aufgabe
+      description: Was soll ausdrücklich nicht umgesetzt werden?
+  - type: textarea
+    id: hinweise
+    attributes:
+      label: Hinweise
+      description: Offene Punkte, Abhängigkeiten zu anderen Issues, Ideen zur Umsetzung.
