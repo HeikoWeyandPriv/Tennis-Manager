@@ -12,10 +12,6 @@
 - **Belag:** Sollen Sand, Rasen und Hartplatz die Schlagtypen unterschiedlich beeinflussen (z. B. Slice auf Rasen stärker, Topspin auf Sand)?
 - **Kombinationsformel:** Wie genau werden Seite und Schlagtyp zu einem Ausführungswert verrechnet?
 
-## Darstellung
-
-- **Technik der Animation:** 2D-Canvas, SVG oder eine Spiel-Engine? (Teil der Architekturentscheidung)
-
 ## Später
 
 - **Coaches:** Welche Coach-Typen gibt es, und was verbessern sie? (Idee aus der Konzeptphase: Coaches verbessern vor allem die Qualität der Informationen beim Changeover.)
@@ -23,4 +19,5 @@
 - **Situative Taktikregeln:** z. B. „bei Breakbällen sicherer spielen“.
 - **Spielintelligenz:** Soll sie später durch Matcherfahrung wachsen?
 - **Start-Energie über mehrere Matches:** Ermüdung innerhalb eines Turniers.
-- **Mehrspielermodus:** gewünscht oder nicht? Hat große Auswirkungen auf die Architektur.
+- **Mehrspielermodus:** vorerst nicht vorgesehen – das Spiel wird allein gespielt und hat kein Backend (ADR 0009). Würde ein neues ADR erfordern.
+- **Auslieferung:** Wie wird das Spiel später ausgeliefert und gestartet (z. B. PWA oder Desktop-App mit Tauri)? Bewusst zurückgestellt (ADR 0009).
