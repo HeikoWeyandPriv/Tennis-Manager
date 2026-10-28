@@ -1,0 +1,31 @@
+name: Entscheidung
+description: Eine offene Design- oder Architekturfrage, die geklärt werden muss
+title: "[Entscheidung] "
+labels: ["braucht-entscheidung"]
+body:
+  - type: dropdown
+    id: art
+    attributes:
+      label: Art der Entscheidung
+      options:
+        - Design
+        - Architektur
+    validations:
+      required: true
+  - type: textarea
+    id: frage
+    attributes:
+      label: Frage
+      description: Was muss entschieden werden, und warum jetzt?
+    validations:
+      required: true
+  - type: textarea
+    id: optionen
+    attributes:
+      label: Optionen
+      description: Mögliche Antworten mit Vor- und Nachteilen.
+  - type: textarea
+    id: ergebnis
+    attributes:
+      label: Ergebnis
+      description: Wird nach der Entscheidung ergänzt. Danach ADR oder Design-Dokument aktualisieren.

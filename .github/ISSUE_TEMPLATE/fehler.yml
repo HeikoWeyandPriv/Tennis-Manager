@@ -1,0 +1,23 @@
+name: Fehler
+description: Etwas verhält sich anders als im Design beschrieben oder funktioniert nicht
+title: "[Fehler] "
+labels: ["typ:bug"]
+body:
+  - type: textarea
+    id: beobachtung
+    attributes:
+      label: Was passiert?
+    validations:
+      required: true
+  - type: textarea
+    id: erwartung
+    attributes:
+      label: Was sollte passieren?
+      description: Wenn möglich mit Verweis auf das Design-Dokument.
+    validations:
+      required: true
+  - type: textarea
+    id: nachstellen
+    attributes:
+      label: Wie lässt es sich nachstellen?
+      description: Schritte, Spielsituation oder Seed der Simulation.
