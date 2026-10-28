@@ -34,4 +34,10 @@ Siehe Skill `.claude/skills/issue-umsetzen/SKILL.md`.
 
 ## Technik
 
-Noch nicht festgelegt. Wird in ADRs entschieden; bis dahin keinen Produktionscode anlegen.
+TypeScript (strikt) · pnpm-Workspace (`packages/engine`, `packages/app`) · React + Vite + Zustand · PixiJS · IndexedDB über Dexie · Vitest, fast-check, Playwright · statisch, ohne Backend. Details und Begründungen: `docs/architecture/overview.md`.
+
+Architektur-Kernregeln (ADR 0003):
+- Die Engine importiert nichts aus anderen Paketen und nutzt keine Browser-APIs.
+- Die Engine ist deterministisch: kein `Math.random`, keine Systemzeit – nur der Zufallsgenerator mit Seed aus dem Spielzustand.
+- Der Spielzustand ist reine, serialisierbare Daten.
+- Keine Spiellogik in React-Komponenten, Stores oder der Match-Darstellung.
