@@ -16,6 +16,7 @@ Ablauf für jede Umsetzung eines Issues. Die Pflichtregeln aus `CLAUDE.md` gelte
 ## 2. Prüfen
 
 Anhalten und im Issue nachfragen (Label `braucht-entscheidung` setzen), wenn:
+
 - das Issue dem Design oder einem ADR widerspricht,
 - Akzeptanzkriterien fehlen oder mehrdeutig sind,
 - die Umsetzung eine neue Architekturentscheidung erfordert, deren Richtung nicht klar ist.

@@ -10,16 +10,16 @@ Das Projekt wird weitgehend agentisch entwickelt. Tests sind neben den Dokumente
 
 ## Entscheidung
 
-| Ebene | Werkzeug | Zweck |
-|---|---|---|
-| Engine | **Vitest** | Tests der Spiellogik, schnell und ohne Browser |
-| Invarianten | **fast-check** | Eigenschaftsbasierte Tests über viele Zufallsfälle, z. B. „Energie wird nie negativ“, „ein Satz endet immer regelkonform“ |
-| Determinismus | Vitest | Gleicher Seed und gleiche Eingaben ergeben identische Ergebnisse |
-| Balancing | eigenes Skript in `tools/` | Massensimulationen mit Statistikausgabe; zur Analyse, nicht als bestehen/nicht-bestehen-Test |
-| Oberfläche | **Vitest** mit React Testing Library | Komponenten und Oberflächenlogik |
-| Ende-zu-Ende | **Playwright** | Durchklicken der Anwendung im Browser, inklusive Screenshots |
-| Codestil | **ESLint** und **Prettier** | Einheitlicher Stil, frühes Erkennen von Fehlern |
-| Typen | TypeScript im strikten Modus | Typprüfung als eigener Schritt |
+| Ebene         | Werkzeug                             | Zweck                                                                                                                     |
+| ------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| Engine        | **Vitest**                           | Tests der Spiellogik, schnell und ohne Browser                                                                            |
+| Invarianten   | **fast-check**                       | Eigenschaftsbasierte Tests über viele Zufallsfälle, z. B. „Energie wird nie negativ“, „ein Satz endet immer regelkonform“ |
+| Determinismus | Vitest                               | Gleicher Seed und gleiche Eingaben ergeben identische Ergebnisse                                                          |
+| Balancing     | eigenes Skript in `tools/`           | Massensimulationen mit Statistikausgabe; zur Analyse, nicht als bestehen/nicht-bestehen-Test                              |
+| Oberfläche    | **Vitest** mit React Testing Library | Komponenten und Oberflächenlogik                                                                                          |
+| Ende-zu-Ende  | **Playwright**                       | Durchklicken der Anwendung im Browser, inklusive Screenshots                                                              |
+| Codestil      | **ESLint** und **Prettier**          | Einheitlicher Stil, frühes Erkennen von Fehlern                                                                           |
+| Typen         | TypeScript im strikten Modus         | Typprüfung als eigener Schritt                                                                                            |
 
 Regeln:
 

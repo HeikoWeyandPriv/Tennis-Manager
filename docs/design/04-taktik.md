@@ -6,12 +6,12 @@ Tendenzen werden vor dem Match eingestellt und können bei jedem Changeover ange
 
 ## Übersicht
 
-| Bereich | Regler |
-|---|---|
-| **Rallye** | Schlagmix, Zielseite, Grundlinie ↔ Netz, Risiko |
-| **1. Aufschlag** | Aufschlagmix, Zielseite, Risiko |
-| **2. Aufschlag** | Aufschlagmix, Zielseite, Risiko |
-| **Return** | Risiko |
+| Bereich          | Regler                                          |
+| ---------------- | ----------------------------------------------- |
+| **Rallye**       | Schlagmix, Zielseite, Grundlinie ↔ Netz, Risiko |
+| **1. Aufschlag** | Aufschlagmix, Zielseite, Risiko                 |
+| **2. Aufschlag** | Aufschlagmix, Zielseite, Risiko                 |
+| **Return**       | Risiko                                          |
 
 ## Rallye
 
@@ -80,11 +80,11 @@ Höheres Risiko bringt mehr Tempo und Präzision, aber auch mehr Fehler. Beim 2.
 
 Jede Tendenz hat Vor- und Nachteile:
 
-| Tendenz | Vorteil | Preis |
-|---|---|---|
-| Viel Power | Mehr Winner, kürzere Punkte | Mehr Fehler, mehr Energieverbrauch |
-| Viele Netzangriffe | Punkte schneller beenden | Energie, anfällig für Lob und Passierschlag |
-| Hohes Risiko | Mehr Winner, Asse | Mehr Fehler und Doppelfehler |
+| Tendenz              | Vorteil                        | Preis                                                  |
+| -------------------- | ------------------------------ | ------------------------------------------------------ |
+| Viel Power           | Mehr Winner, kürzere Punkte    | Mehr Fehler, mehr Energieverbrauch                     |
+| Viele Netzangriffe   | Punkte schneller beenden       | Energie, anfällig für Lob und Passierschlag            |
+| Hohes Risiko         | Mehr Winner, Asse              | Mehr Fehler und Doppelfehler                           |
 | Einseitige Zielseite | Schwäche des Gegners ausnutzen | Berechenbar; die gegnerische KI stellt sich darauf ein |
 
 ## Zusammenspiel mit Attributen

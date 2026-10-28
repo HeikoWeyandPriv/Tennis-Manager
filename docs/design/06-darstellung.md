@@ -6,10 +6,10 @@ Matches werden in einer **Draufsicht** dargestellt. Jeder Punkt kann verfolgt we
 
 ### Zwei Schichten
 
-| Schicht | Aufgabe |
-|---|---|
-| **Logik** | Berechnet den Punkt in Zonen und Zuständen (siehe [02 Punktsimulation](02-punktsimulation.md)) |
-| **Darstellung** | Animiert das Ergebnis flüssig: Ballflug, Laufwege, Positionen |
+| Schicht         | Aufgabe                                                                                        |
+| --------------- | ---------------------------------------------------------------------------------------------- |
+| **Logik**       | Berechnet den Punkt in Zonen und Zuständen (siehe [02 Punktsimulation](02-punktsimulation.md)) |
+| **Darstellung** | Animiert das Ergebnis flüssig: Ballflug, Laufwege, Positionen                                  |
 
 Die Darstellung erfindet keine Ereignisse; sie visualisiert ausschließlich, was die Logik berechnet hat.
 
@@ -17,13 +17,13 @@ Die Darstellung erfindet keine Ereignisse; sie visualisiert ausschließlich, was
 
 Ziel: Der Spieler soll erkennen, **welche taktischen Mittel angewendet werden**.
 
-| Mittel | Beschreibung |
-|---|---|
-| **Positionen** | Weit aus dem Feld gedrängte Spieler und offene Ecken sind direkt sichtbar. |
+| Mittel                      | Beschreibung                                                                                                                                                        |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Positionen**              | Weit aus dem Feld gedrängte Spieler und offene Ecken sind direkt sichtbar.                                                                                          |
 | **Flugkurven je Schlagtyp** | Power gerade und schnell, Topspin hoher Bogen, Slice flach, Stop kurz, Lob hoch über den Gegner (siehe Schlagtypen in [02 Punktsimulation](02-punktsimulation.md)). |
-| **Farbige Ballspuren** | Kurzer Schweif, der das Muster eines Ballwechsels zeigt. |
-| **Einblendungen** | Kleine Labels im Moment des Schlags, z. B. „Stop“, „Netzangriff“, „Passierschlag“. |
-| **Kommentarzeile** | Ein Satz nach dem Punkt, der das Muster benennt, z. B. „Öffnet das Feld über die Rückhand und beendet den Punkt am Netz.“ |
+| **Farbige Ballspuren**      | Kurzer Schweif, der das Muster eines Ballwechsels zeigt.                                                                                                            |
+| **Einblendungen**           | Kleine Labels im Moment des Schlags, z. B. „Stop“, „Netzangriff“, „Passierschlag“.                                                                                  |
+| **Kommentarzeile**          | Ein Satz nach dem Punkt, der das Muster benennt, z. B. „Öffnet das Feld über die Rückhand und beendet den Punkt am Netz.“                                           |
 
 Einblendungen und Kommentarzeile sind **abschaltbar**.
 
