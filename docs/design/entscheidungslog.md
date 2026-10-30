@@ -22,10 +22,11 @@ Getroffene Designentscheidungen mit kurzer Begründung. Neueste Einträge oben i
 
 ## Simulation
 
-| Entscheidung                                                                             | Begründung                                                              |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| **Zonenmodell** statt echter Ballphysik.                                                 | Weniger Aufwand, bessere taktische Lesbarkeit, leichter zu balancieren. |
-| **Schlagtypen** Power, Topspin, Slice, Stop, Lob; **Aufschlagtypen** Power, Kick, Slice. | Mehr taktische Tiefe; jeder Typ hat eine erkennbare Flugkurve.          |
+| Entscheidung                                                                                                                   | Begründung                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| **Belag** (Sand, Rasen, Hartplatz) ist ein Parameter des Matches und wirkt auf die Ausführung der Schlagtypen; im MVP neutral. | Authentizität und taktische Tiefe sollen später ohne Umbau ergänzbar sein; im MVP weniger Balancing. |
+| **Zonenmodell** statt echter Ballphysik.                                                                                       | Weniger Aufwand, bessere taktische Lesbarkeit, leichter zu balancieren.                              |
+| **Schlagtypen** Power, Topspin, Slice, Stop, Lob; **Aufschlagtypen** Power, Kick, Slice.                                       | Mehr taktische Tiefe; jeder Typ hat eine erkennbare Flugkurve.                                       |
 
 ## Taktik
 
@@ -41,22 +42,26 @@ Getroffene Designentscheidungen mit kurzer Begründung. Neueste Einträge oben i
 
 ## Energie & Momentum
 
-| Entscheidung                                                                                                         | Begründung                                                |
-| -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| **Energie als Vorrat**, verbraucht durch Ballwechsel und energieintensive Taktiken, teilweise regeneriert in Pausen. | Macht lange Matches und Taktikwahl strategisch bedeutsam. |
-| Niedrige Energie verschlechtert **Ausführung und Ankunft**.                                                          | Ermüdung soll spürbar, aber nachvollziehbar wirken.       |
-| **Gegnerische Energie verborgen**, nur indirekt erkennbar.                                                           | Konsistent mit verborgenen Tendenzen.                     |
-| **Momentum** steigt durch gelungene Aktionen, sinkt durch misslungene, wirkt leicht auf alle Attribute.              | Dramaturgie und Comebacks.                                |
+| Entscheidung                                                                                                         | Begründung                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **Energie und Momentum werden im vollen Konzept definiert**; der Umfang im MVP wird später entschieden.              | Das Konzept soll vollständig dokumentiert sein, bevor es für das MVP zugeschnitten wird. |
+| **Energie als Vorrat**, verbraucht durch Ballwechsel und energieintensive Taktiken, teilweise regeneriert in Pausen. | Macht lange Matches und Taktikwahl strategisch bedeutsam.                                |
+| Niedrige Energie verschlechtert **Ausführung und Ankunft**.                                                          | Ermüdung soll spürbar, aber nachvollziehbar wirken.                                      |
+| **Gegnerische Energie verborgen**, nur indirekt erkennbar.                                                           | Konsistent mit verborgenen Tendenzen.                                                    |
+| **Momentum** steigt durch gelungene Aktionen, sinkt durch misslungene, wirkt leicht auf alle Attribute.              | Dramaturgie und Comebacks.                                                               |
 
 ## Attribute
 
-| Entscheidung                                                                            | Begründung                                                   |
-| --------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| **Skala 1–100.**                                                                        | Feine Entwicklung und gutes Balancing.                       |
-| Kategorien: **technisch, körperlich, angeboren, mental**.                               | Unterschiedliche Arten, wie sich Werte ändern.               |
-| **Schlagtypen und Aufschlagtypen als technische Attribute.**                            | Tendenzen wirken nur so gut wie die zugehörigen Fähigkeiten. |
-| **Gefühl entfernt.**                                                                    | Durch Stop und Lob ersetzt.                                  |
-| **Aufschlag-Präzision entfernt.**                                                       | Abgedeckt durch Risiko und Aufschlagtyp-Attribute.           |
-| **Körpergröße und Rückhandtyp** enthalten.                                              | Prägen Spielertypen und machen Schlagtypen interessanter.    |
-| **Spielintelligenz vorerst fest.**                                                      | Einfachheit; Wachstum durch Erfahrung eventuell später.      |
-| **Mentale Stärke (langfristig) und Selbstvertrauen (kurzfristig)** als getrennte Werte. | Bildet Grundcharakter und aktuelle Form getrennt ab.         |
+| Entscheidung                                                                                                                           | Begründung                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Attribute beider Spieler sind vor dem Match einstellbar** (MVP); die Möglichkeit soll in irgendeiner Form im fertigen Spiel bleiben. | Stärkeverhältnisse und Spielertypen lassen sich gezielt ausprobieren.                                           |
+| **Körpergröße wirkt stetig** nach Größe in cm, nicht in Klassen.                                                                       | Fein abgestuft, keine Sprünge an Klassengrenzen.                                                                |
+| **Rückhandtyp:** Bonus wirkt auf die Ausführung, der Malus der einhändigen Rückhand gegen hohen Topspin auf die Ankunft.               | Entspricht der Aufteilung der Schlagauflösung: eingehender Schlagtyp → Ankunft, kombinierter Wert → Ausführung. |
+| **Skala 1–100.**                                                                                                                       | Feine Entwicklung und gutes Balancing.                                                                          |
+| Kategorien: **technisch, körperlich, angeboren, mental**.                                                                              | Unterschiedliche Arten, wie sich Werte ändern.                                                                  |
+| **Schlagtypen und Aufschlagtypen als technische Attribute.**                                                                           | Tendenzen wirken nur so gut wie die zugehörigen Fähigkeiten.                                                    |
+| **Gefühl entfernt.**                                                                                                                   | Durch Stop und Lob ersetzt.                                                                                     |
+| **Aufschlag-Präzision entfernt.**                                                                                                      | Abgedeckt durch Risiko und Aufschlagtyp-Attribute.                                                              |
+| **Körpergröße und Rückhandtyp** enthalten.                                                                                             | Prägen Spielertypen und machen Schlagtypen interessanter.                                                       |
+| **Spielintelligenz vorerst fest.**                                                                                                     | Einfachheit; Wachstum durch Erfahrung eventuell später.                                                         |
+| **Mentale Stärke (langfristig) und Selbstvertrauen (kurzfristig)** als getrennte Werte.                                                | Bildet Grundcharakter und aktuelle Form getrennt ab.                                                            |

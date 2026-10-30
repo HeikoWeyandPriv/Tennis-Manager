@@ -4,10 +4,12 @@ Dieses Dokument beschreibt den **Ablauf** eines Matches: wann Punkte gespielt we
 
 ## Ablauf
 
-1. **Vor dem Match:** Der Spieler stellt seine Tendenzen ein (Rallye, 1. Aufschlag, 2. Aufschlag, Return – siehe [04 Taktik](04-taktik.md)).
+1. **Vor dem Match:** Die Attribute beider Spieler werden festgelegt (im MVP frei einstellbar, siehe [05 Attribute](05-attribute.md)). Danach stellt der Spieler seine Tendenzen ein (Rallye, 1. Aufschlag, 2. Aufschlag, Return – siehe [04 Taktik](04-taktik.md)).
 2. **Punkte spielen:** Die Simulation berechnet jeden Punkt. Je nach Ansichtsmodus wird er animiert oder übersprungen.
 3. **Changeover:** Der Spieler sieht Statistiken, eigene Energie und Momentum und kann seine Tendenzen anpassen. Die gegnerische KI passt sich ebenfalls an.
 4. **Wiederholen** bis zum Matchende.
+
+Ein Match hat feste Rahmenbedingungen: das **Zählformat** (siehe unten) und den **Belag** (siehe [02 Punktsimulation](02-punktsimulation.md)).
 
 ## Zählung
 

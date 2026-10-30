@@ -53,7 +53,7 @@ Siehe [03 Energie & Momentum](03-energie-momentum.md).
 | Eigenschaft                              | Wirkung                                                                                                                            |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | **Händigkeit** (links / rechts)          | Bestimmt, wo Vorhand und Rückhand liegen; Zielseiten-Tendenzen wirken gegen Linkshänder anders                                     |
-| **Körpergröße** (in cm)                  | Bonus auf Aufschlag und Netzreichweite, kleiner Malus auf Schnelligkeit                                                            |
+| **Körpergröße** (in cm)                  | Bonus auf Aufschlag und Netzreichweite, kleiner Malus auf Schnelligkeit; die Wirkung ist stetig, nicht in Klassen abgestuft        |
 | **Rückhandtyp** (einhändig / beidhändig) | Modifiziert die Rückhandkombinationen (siehe unten)                                                                                |
 | **Spielintelligenz**                     | Bessere Startposition bei der Ankunft, da Bälle früher gelesen werden. Bei KI-Gegnern zusätzlich: wie schnell sie Muster erkennen. |
 
@@ -63,6 +63,8 @@ Siehe [03 Energie & Momentum](03-energie-momentum.md).
 | -------------- | --------------------------------------------- | ----------------------------------------------- |
 | **Einhändig**  | Bonus auf Rückhand-Slice und Rückhand-Stop    | Malus gegen hohe Topspin-Bälle auf die Rückhand |
 | **Beidhändig** | Bonus auf Rückhand-Power und Rückhand-Topspin | –                                               |
+
+Der Bonus des Rückhandtyps wirkt auf die **Ausführung** (er modifiziert den kombinierten Wert der Rückhandschläge). Der Malus der einhändigen Rückhand gegen hohe Topspin-Bälle wirkt auf die **Ankunft**, weil er vom eingehenden Schlagtyp abhängt (siehe [02 Punktsimulation](02-punktsimulation.md)).
 
 ## Mentale Attribute
 
@@ -76,6 +78,14 @@ Siehe [03 Energie & Momentum](03-energie-momentum.md).
 - Mentale Stärke wächst nur **langsam** und hat eine **Obergrenze**.
 - Siege gegen klar schwächere Gegner zählen kaum, Siege gegen stärkere viel.
 
+## Attribute vor dem Match einstellen
+
+Im MVP können die Attribute **beider Spieler vor dem Match frei eingestellt** werden. So lassen sich Stärkeverhältnisse und Spielertypen gezielt ausprobieren.
+
+Die Einstellung legt das **Ausgangsprofil** für das Match fest. Sie ist keine Veränderung im Sinne der Kategorien oben, zum Beispiel bleiben angeborene Eigenschaften in einer Karriere unveränderlich.
+
+Die Möglichkeit ist nicht nur als Hilfsmittel für das MVP gedacht, sondern soll im fertigen Spiel in irgendeiner Form erhalten bleiben. In welcher Form, ist offen (siehe [Offene Fragen](offene-fragen.md)).
+
 ## Spielertypen (Beispiele)
 
 | Typ                | Profil                                                                                          |
@@ -86,18 +96,18 @@ Siehe [03 Energie & Momentum](03-energie-momentum.md).
 
 ## Übersicht: Wo wirkt welches Attribut?
 
-| Attribut                         | Ankunft  | Ausführung          | Energie    | Momentum      |
-| -------------------------------- | -------- | ------------------- | ---------- | ------------- |
-| Vorhand, Rückhand                |          | ✓                   |            |               |
-| Power, Topspin, Slice, Stop, Lob |          | ✓                   |            |               |
-| Netzspiel                        |          | ✓                   |            |               |
-| Return                           |          | ✓                   |            |               |
-| Aufschlag-Attribute              |          | ✓                   |            |               |
-| Ausdauer                         |          |                     | ✓ (Vorrat) |               |
-| Schnelligkeit                    | ✓        |                     |            |               |
-| Regeneration                     |          |                     | ✓ (Pausen) |               |
-| Körpergröße                      | ✓ (Netz) | ✓ (Aufschlag)       |            |               |
-| Rückhandtyp                      |          | ✓                   |            |               |
-| Spielintelligenz                 | ✓        |                     |            |               |
-| Mentale Stärke                   |          | ✓ (wichtige Punkte) |            | ✓ (Dämpfung)  |
-| Selbstvertrauen                  |          |                     |            | ✓ (Startwert) |
+| Attribut                         | Ankunft                       | Ausführung          | Energie    | Momentum      |
+| -------------------------------- | ----------------------------- | ------------------- | ---------- | ------------- |
+| Vorhand, Rückhand                |                               | ✓                   |            |               |
+| Power, Topspin, Slice, Stop, Lob |                               | ✓                   |            |               |
+| Netzspiel                        |                               | ✓                   |            |               |
+| Return                           |                               | ✓                   |            |               |
+| Aufschlag-Attribute              |                               | ✓                   |            |               |
+| Ausdauer                         |                               |                     | ✓ (Vorrat) |               |
+| Schnelligkeit                    | ✓                             |                     |            |               |
+| Regeneration                     |                               |                     | ✓ (Pausen) |               |
+| Körpergröße                      | ✓ (Netz)                      | ✓ (Aufschlag)       |            |               |
+| Rückhandtyp                      | ✓ (Malus gegen hohen Topspin) | ✓                   |            |               |
+| Spielintelligenz                 | ✓                             |                     |            |               |
+| Mentale Stärke                   |                               | ✓ (wichtige Punkte) |            | ✓ (Dämpfung)  |
+| Selbstvertrauen                  |                               |                     |            | ✓ (Startwert) |
