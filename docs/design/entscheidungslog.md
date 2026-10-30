@@ -13,6 +13,7 @@ Getroffene Designentscheidungen mit kurzer Begründung. Neueste Einträge oben i
 
 | Entscheidung                                                                                | Begründung                                                                 |
 | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **Zählformat als Parameter** eines Matches; erste Variante „Standard“.                      | Reale Turniere zählen verschieden; Varianten sollen ergänzbar sein.        |
 | Matches werden in einer **Draufsicht** simuliert; jeder Punkt ist verfolgbar.               | Taktik soll sichtbar und nachvollziehbar sein.                             |
 | Taktische Anpassungen nur beim **Changeover**.                                              | Natürlicher Rhythmus mit klaren Entscheidungsmomenten.                     |
 | **Drei Ansichtsmodi:** alle Punkte (Default), nur entscheidende Punkte, Games überspringen. | Matches können sonst sehr lang werden.                                     |
