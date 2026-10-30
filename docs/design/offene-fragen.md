@@ -4,7 +4,7 @@
 
 - **Gegnerische KI:** Wie erkennt sie Muster des Spielers? Wie und wie stark passt sie ihre Tendenzen beim Changeover an? Welche Rolle spielt die Spielintelligenz dabei?
 - **Entscheidende Punkte:** Welche Punkte zählen im Ansichtsmodus „nur entscheidende Punkte“ genau? (Breakbälle, Satzbälle, Tiebreaks sicher – auch 30:30 und Einstand?)
-- **Matchformat:** Zwei oder drei Gewinnsätze? Abhängig vom Turnier?
+- **Weitere Zählformate:** Die Variante „Standard“ ist festgelegt (zwei Gewinnsätze, Tiebreak in allen Sätzen, Einstand mit Vorteil). Offen: Welche realen Turnierformate kommen dazu (andere Gewinnsätze, Games pro Satz, Tiebreak-Punkte), und wie wird einem Match sein Zählformat zugeordnet, z. B. über das Turnier?
 - **Matchdauer und Animationstempo:** Wie lange darf ein Match im Modus „alle Punkte“ maximal dauern?
 
 ## Simulation

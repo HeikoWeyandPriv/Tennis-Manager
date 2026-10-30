@@ -9,6 +9,28 @@ Dieses Dokument beschreibt den **Ablauf** eines Matches: wann Punkte gespielt we
 3. **Changeover:** Der Spieler sieht Statistiken, eigene Energie und Momentum und kann seine Tendenzen anpassen. Die gegnerische KI passt sich ebenfalls an.
 4. **Wiederholen** bis zum Matchende.
 
+## Zählung
+
+Die Zählung folgt dem echten Tennis: Punkte im Game (0, 15, 30, 40, Einstand, Vorteil), Games im Satz, Sätze im Match. Steht es im Satz bei den Games unentschieden, entscheidet ein Tiebreak.
+
+Aufschlag:
+
+- Der Aufschlag wechselt nach jedem Game.
+- Im Tiebreak schlägt ein Spieler den ersten Punkt auf, danach wechselt der Aufschlag alle zwei Punkte.
+- Im folgenden Satz schlägt der Spieler auf, der im Tiebreak zuerst zurückgeschlagen hat.
+
+### Zählformat
+
+Wie ein Match gezählt wird, legt das **Zählformat** fest. Es besteht aus drei Parametern, die von Match zu Match verschieden sein können:
+
+- **Gewinnsätze:** Sätze, die für den Matchgewinn nötig sind
+- **Games pro Satz:** Games, die für einen Satzgewinn nötig sind (mit zwei Games Vorsprung); bei Gleichstand auf diesem Wert folgt der Tiebreak
+- **Tiebreak-Punkte:** Punkte, die für den Tiebreak-Gewinn nötig sind (mit zwei Punkten Vorsprung)
+
+Die Logik des Aufschlagspiels ist fest und gilt für jedes Format: Zählweise im Game mit Einstand und Vorteil, Aufschlagwechsel und Changeover-Rhythmus (siehe unten).
+
+Aktuell definiert ist die Variante **Standard**: zwei Gewinnsätze, sechs Games pro Satz, Tiebreak bis sieben Punkte in jedem Satz. Weitere reale Turnierformate folgen später (siehe [Offene Fragen](offene-fragen.md)); die Zählung ist darauf vorbereitet.
+
 ## Changeover-Rhythmus
 
 Der Rhythmus folgt dem echten Tennis:
