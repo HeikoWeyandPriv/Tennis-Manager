@@ -14,11 +14,11 @@ Es gibt **keine echte Ballphysik**. Die Simulation arbeitet mit Zonen und Zustä
 
 Jede Platzhälfte ist in **3 × 3 Zielzonen** eingeteilt:
 
-| | Links | Mitte | Rechts |
-|---|---|---|---|
-| **Tief** (nahe Grundlinie) | | | |
-| **Mittel** | | | |
-| **Kurz** (vor der T-Linie) | | | |
+|                            | Links | Mitte | Rechts |
+| -------------------------- | ----- | ----- | ------ |
+| **Tief** (nahe Grundlinie) |       |       |        |
+| **Mittel**                 |       |       |        |
+| **Kurz** (vor der T-Linie) |       |       |        |
 
 ### Spielerposition
 
@@ -38,6 +38,7 @@ Wie gut erreicht der Spieler den Ball?
 **Einflüsse:** Laufweg (Position → Zielzone), Qualität des eingehenden Balls, Schlagtyp des eingehenden Balls, Schnelligkeit, Spielintelligenz (Startposition), Energie, Momentum.
 
 **Ergebnis:**
+
 - **bequem** – volle Auswahl an Schlägen
 - **unter Druck** – eingeschränkte Auswahl
 - **knapp** – stark eingeschränkte Auswahl, vor allem defensive Schläge
@@ -60,6 +61,7 @@ Gelingt der Schlag?
 **Einflüsse:** kombinierter Wert aus Seite und Schlagtyp (siehe [05 Attribute](05-attribute.md)), Schwierigkeit der Ankunft, Risiko, Energie, Momentum, bei wichtigen Punkten die mentale Stärke.
 
 **Ergebnis:**
+
 - **Fehler** – Netz oder Aus
 - **schwach**
 - **solide**
@@ -74,6 +76,7 @@ Der Ball landet in der Zielzone. Der Gegner beginnt wieder bei Schritt 1.
 ### Punktende
 
 Ein Punkt endet durch:
+
 - **Winner** – Ball nicht erreicht
 - **Unerzwungener Fehler** – Fehler bei bequemer Ankunft
 - **Erzwungener Fehler** – Fehler bei Ankunft unter Druck oder knapp
@@ -83,23 +86,23 @@ Ein Punkt endet durch:
 
 Die Situation schlägt die Tendenz. Beispiele:
 
-| Situation | Wirkung auf die Schlagwahl |
-|---|---|
-| Ankunft knapp | Power und Stop kaum möglich, Lob und Slice werden wahrscheinlicher |
-| Ankunft bequem, Gegner weit hinter der Grundlinie | alle Typen möglich, Stop bekommt einen Bonus |
-| Gegner am Netz | Lob und Power (als Passierschlag) dominieren |
-| Eigener Spieler am Netz | Volley bzw. Schmetterball (Attribut Netzspiel) |
-| Ankunft bequem im Mittelfeld | Netzangriff wird wahrscheinlicher, wenn die Tendenz Netzangriffe vorsieht |
+| Situation                                         | Wirkung auf die Schlagwahl                                                |
+| ------------------------------------------------- | ------------------------------------------------------------------------- |
+| Ankunft knapp                                     | Power und Stop kaum möglich, Lob und Slice werden wahrscheinlicher        |
+| Ankunft bequem, Gegner weit hinter der Grundlinie | alle Typen möglich, Stop bekommt einen Bonus                              |
+| Gegner am Netz                                    | Lob und Power (als Passierschlag) dominieren                              |
+| Eigener Spieler am Netz                           | Volley bzw. Schmetterball (Attribut Netzspiel)                            |
+| Ankunft bequem im Mittelfeld                      | Netzangriff wird wahrscheinlicher, wenn die Tendenz Netzangriffe vorsieht |
 
 ## Schlagtypen (Rallye)
 
-| Schlagtyp | Stärke | Schwäche | Energie | Flugkurve |
-|---|---|---|---|---|
-| **Power** | Hohes Tempo, Gegner kommt öfter unter Druck oder gar nicht an den Ball | Höchste Fehlerquote, braucht bequeme Ankunft | hoch | gerade, schnell |
-| **Topspin** | Sicher, tief, hoher Absprung; solider Rallyeschlag zum Druckaufbau | Wenig direkte Winner | mittel | hoher Bogen, springt hoch ab |
-| **Slice** | Gut aus der Defensive, verschafft Zeit, flacher Absprung; idealer Anlaufball | Wenig Druck, lädt zum Angriff ein | niedrig | flach, gleitend |
-| **Stop** | Sehr effektiv gegen Gegner weit hinter der Grundlinie; kostet den Gegner viel Energie | Hohes Risiko; wird bestraft, wenn der Gegner nah steht | niedrig (für den Gegner hoch) | kurz hinter dem Netz |
-| **Lob** | Gegen Netzspieler; als Defensivlob Zeitgewinn | Zu kurz gespielt folgt ein Schmetterball | niedrig | hoher Bogen über den Gegner |
+| Schlagtyp   | Stärke                                                                                | Schwäche                                               | Energie                       | Flugkurve                    |
+| ----------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------ | ----------------------------- | ---------------------------- |
+| **Power**   | Hohes Tempo, Gegner kommt öfter unter Druck oder gar nicht an den Ball                | Höchste Fehlerquote, braucht bequeme Ankunft           | hoch                          | gerade, schnell              |
+| **Topspin** | Sicher, tief, hoher Absprung; solider Rallyeschlag zum Druckaufbau                    | Wenig direkte Winner                                   | mittel                        | hoher Bogen, springt hoch ab |
+| **Slice**   | Gut aus der Defensive, verschafft Zeit, flacher Absprung; idealer Anlaufball          | Wenig Druck, lädt zum Angriff ein                      | niedrig                       | flach, gleitend              |
+| **Stop**    | Sehr effektiv gegen Gegner weit hinter der Grundlinie; kostet den Gegner viel Energie | Hohes Risiko; wird bestraft, wenn der Gegner nah steht | niedrig (für den Gegner hoch) | kurz hinter dem Netz         |
+| **Lob**     | Gegen Netzspieler; als Defensivlob Zeitgewinn                                         | Zu kurz gespielt folgt ein Schmetterball               | niedrig                       | hoher Bogen über den Gegner  |
 
 ### Konter-Beziehungen
 
@@ -110,15 +113,15 @@ Die Situation schlägt die Tendenz. Beispiele:
 
 ## Aufschlagtypen
 
-| Aufschlagtyp | Profil |
-|---|---|
-| **Power** (flach) | Viele Asse und direkte Punkte, niedrigste Quote; klassischer 1. Aufschlag |
-| **Kick** | Sicher, springt hoch ab; klassischer 2. Aufschlag, stark gegen die Rückhand |
-| **Slice** | Zieht nach außen und öffnet das Feld für den nächsten Schlag |
+| Aufschlagtyp      | Profil                                                                      |
+| ----------------- | --------------------------------------------------------------------------- |
+| **Power** (flach) | Viele Asse und direkte Punkte, niedrigste Quote; klassischer 1. Aufschlag   |
+| **Kick**          | Sicher, springt hoch ab; klassischer 2. Aufschlag, stark gegen die Rückhand |
+| **Slice**         | Zieht nach außen und öffnet das Feld für den nächsten Schlag                |
 
 ### Zielseite beim Aufschlag
 
-Die Taktik legt die Zielseite als **Vorhand oder Rückhand des Gegners** fest. Die Engine rechnet das abhängig von Spielfeldseite (Einstand/Vorteil) und Händigkeit des Gegners intern in *außen*, *Körper* oder *durch die Mitte* um.
+Die Taktik legt die Zielseite als **Vorhand oder Rückhand des Gegners** fest. Die Engine rechnet das abhängig von Spielfeldseite (Einstand/Vorteil) und Händigkeit des Gegners intern in _außen_, _Körper_ oder _durch die Mitte_ um.
 
 ## Return
 

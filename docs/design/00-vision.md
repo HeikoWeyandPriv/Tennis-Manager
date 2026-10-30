@@ -8,7 +8,7 @@ Ein browserbasierter Tennis-Manager, in dem man die Karriere eines einzelnen Spi
 
 **Simple Regeln, taktisch komplexe Matches.**
 
-Die taktische Tiefe entsteht aus dem Zusammenspiel weniger, klarer Regeln – nicht aus vielen Werten, Menüs oder Sonderfällen. Ein Ballwechsel soll sich wie eine kleine Geschichte lesen lassen: *„Er drückt ihn mit drei Bällen auf die Rückhand und schließt longline ab.“*
+Die taktische Tiefe entsteht aus dem Zusammenspiel weniger, klarer Regeln – nicht aus vielen Werten, Menüs oder Sonderfällen. Ein Ballwechsel soll sich wie eine kleine Geschichte lesen lassen: _„Er drückt ihn mit drei Bällen auf die Rückhand und schließt longline ab.“_
 
 ## Rolle des Spielers
 
@@ -30,14 +30,17 @@ Die taktische Tiefe entsteht aus dem Zusammenspiel weniger, klarer Regeln – ni
 ## Umfang
 
 ### Aktueller Fokus
+
 - Der **Match-Loop**: ein einzelnes Match von Anfang bis Ende, inklusive Simulation, Taktik, Energie, Momentum und Darstellung.
 
 ### Später
+
 - Gegnerische KI (Mustererkennung und Anpassung)
 - Coaches
 - Karriereebene (Turnierkalender, Training, Finanzen, Ranking)
 
 ### Bewusst nicht enthalten (vorerst)
+
 - Steuerung einzelner Schläge während des Ballwechsels
 - Echte Ballphysik (die Simulation arbeitet mit Zonen, siehe [02 Punktsimulation](02-punktsimulation.md))
 - Situative Taktikregeln (z. B. „bei Breakbällen sicherer spielen“) – zunächst nur globale Tendenzen

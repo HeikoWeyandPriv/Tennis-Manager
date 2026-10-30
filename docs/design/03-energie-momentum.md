@@ -10,21 +10,21 @@ Jeder Spieler geht mit einem **Energievorrat** in die Partie. Der Vorrat wird au
 
 ### Verbrauch
 
-| Quelle | Beschreibung |
-|---|---|
-| **Pro Schlag** | Kleiner Grundwert. Lange Ballwechsel summieren sich so von selbst. |
-| **Laufwege** | Je weiter der Weg zum Ball, desto teurer. Wer den Gegner hin- und herjagt, zermürbt ihn. |
-| **Schlagtyp** | Power kostet mehr als Slice oder Lob (siehe Schlagtypen in [02 Punktsimulation](02-punktsimulation.md)). |
-| **Taktik** | Netzangriffe (Sprint nach vorn) und hohes Risiko kosten zusätzlich. |
+| Quelle         | Beschreibung                                                                                             |
+| -------------- | -------------------------------------------------------------------------------------------------------- |
+| **Pro Schlag** | Kleiner Grundwert. Lange Ballwechsel summieren sich so von selbst.                                       |
+| **Laufwege**   | Je weiter der Weg zum Ball, desto teurer. Wer den Gegner hin- und herjagt, zermürbt ihn.                 |
+| **Schlagtyp**  | Power kostet mehr als Slice oder Lob (siehe Schlagtypen in [02 Punktsimulation](02-punktsimulation.md)). |
+| **Taktik**     | Netzangriffe (Sprint nach vorn) und hohes Risiko kosten zusätzlich.                                      |
 
 Dadurch entsteht eine Abwägung: Aggressives Spiel ist pro Schlag teurer, verkürzt aber Ballwechsel. Defensives Spiel ist pro Schlag günstig, führt aber zu langen Rallyes.
 
 ### Regeneration
 
-| Pause | Wirkung |
-|---|---|
-| **Changeover** | Kleiner Bonus |
-| **Satzpause** | Größerer Bonus |
+| Pause          | Wirkung        |
+| -------------- | -------------- |
+| **Changeover** | Kleiner Bonus  |
+| **Satzpause**  | Größerer Bonus |
 
 Die Höhe hängt vom Attribut **Regeneration** ab.
 
@@ -33,10 +33,10 @@ Die Höhe hängt vom Attribut **Regeneration** ab.
 
 ### Auswirkungen
 
-| Schritt der Schlagauflösung | Wirkung bei niedriger Energie |
-|---|---|
-| **Ankunft** | Der Laufradius schrumpft. Bälle werden schlechter oder gar nicht mehr erreicht. |
-| **Ausführung** | Schläge fallen häufiger eine Qualitätsstufe schwächer aus. |
+| Schritt der Schlagauflösung | Wirkung bei niedriger Energie                                                   |
+| --------------------------- | ------------------------------------------------------------------------------- |
+| **Ankunft**                 | Der Laufradius schrumpft. Bälle werden schlechter oder gar nicht mehr erreicht. |
+| **Ausführung**              | Schläge fallen häufiger eine Qualitätsstufe schwächer aus.                      |
 
 Die Wirkung ist **nichtlinear**: Bei hoher Energie spürt man kaum etwas, unterhalb einer Schwelle wird es zunehmend deutlich. Dadurch wird Ermüdung vor allem in späten Sätzen zum Thema.
 
@@ -53,12 +53,12 @@ Momentum ist ein **gemeinsamer Wert als Tauziehen** zwischen beiden Spielern. Ei
 
 ### Was das Momentum bewegt
 
-| Ereignis | Ausschlag |
-|---|---|
-| Punkt gewonnen | klein |
-| Spektakulärer Punktgewinn (Winner, Ass, erfolgreicher Netzangriff) | größer |
-| Unerzwungener Fehler, Doppelfehler | zugunsten des Gegners |
-| Break, Satzgewinn | deutlicher Sprung |
+| Ereignis                                                           | Ausschlag             |
+| ------------------------------------------------------------------ | --------------------- |
+| Punkt gewonnen                                                     | klein                 |
+| Spektakulärer Punktgewinn (Winner, Ass, erfolgreicher Netzangriff) | größer                |
+| Unerzwungener Fehler, Doppelfehler                                 | zugunsten des Gegners |
+| Break, Satzgewinn                                                  | deutlicher Sprung     |
 
 Gelungene Aktionen steigern das Momentum, misslungene senken es.
 

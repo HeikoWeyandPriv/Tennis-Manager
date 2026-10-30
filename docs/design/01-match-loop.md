@@ -24,11 +24,11 @@ Changeovers und Satzpausen haben zusätzlich eine spielmechanische Wirkung: Sie 
 
 ## Ansichtsmodi
 
-| Modus | Verhalten |
-|---|---|
-| **Alle Punkte** (Default) | Jeder Punkt wird animiert. |
+| Modus                        | Verhalten                                                                                                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Alle Punkte** (Default)    | Jeder Punkt wird animiert.                                                                                                                      |
 | **Nur entscheidende Punkte** | Nur wichtige Punkte werden animiert, z. B. Breakbälle, Satzbälle, Matchbälle, Tiebreaks. Welche Punkte genau dazugehören, ist noch festzulegen. |
-| **Games überspringen** | Ganze Aufschlagspiele werden berechnet, man sieht nur das Ergebnis. |
+| **Games überspringen**       | Ganze Aufschlagspiele werden berechnet, man sieht nur das Ergebnis.                                                                             |
 
 Die Logik berechnet **immer** jeden Punkt vollständig. Der Ansichtsmodus entscheidet nur, was animiert wird.
 
@@ -40,18 +40,18 @@ Zusätzlich ist ein **Geschwindigkeitsregler** für die Animation vorgesehen.
 
 ### Statistiken (wie bei TV-Übertragungen)
 
-| Statistik | Beide Spieler |
-|---|---|
-| Asse | ✓ |
-| Doppelfehler | ✓ |
-| 1. Aufschlag in % | ✓ |
-| Gewonnene Punkte nach 1. Aufschlag | ✓ |
-| Gewonnene Punkte nach 2. Aufschlag | ✓ |
-| Winner | ✓ |
-| Unerzwungene Fehler | ✓ |
-| Netzpunkte gewonnen / gespielt | ✓ |
-| Breakbälle genutzt | ✓ |
-| Gewonnene Punkte gesamt | ✓ |
+| Statistik                          | Beide Spieler |
+| ---------------------------------- | ------------- |
+| Asse                               | ✓             |
+| Doppelfehler                       | ✓             |
+| 1. Aufschlag in %                  | ✓             |
+| Gewonnene Punkte nach 1. Aufschlag | ✓             |
+| Gewonnene Punkte nach 2. Aufschlag | ✓             |
+| Winner                             | ✓             |
+| Unerzwungene Fehler                | ✓             |
+| Netzpunkte gewonnen / gespielt     | ✓             |
+| Breakbälle genutzt                 | ✓             |
+| Gewonnene Punkte gesamt            | ✓             |
 
 ### Zustand
 
