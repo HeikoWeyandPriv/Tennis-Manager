@@ -35,7 +35,7 @@ Jeder Schlag durchläuft vier Schritte.
 
 Wie gut erreicht der Spieler den Ball?
 
-**Einflüsse:** Laufweg (Position → Zielzone), Qualität des eingehenden Balls, Schlagtyp des eingehenden Balls, Schnelligkeit, Spielintelligenz (Startposition), Energie, Momentum.
+**Einflüsse:** Laufweg (Position → Zielzone), Qualität des eingehenden Balls, Schlagtyp des eingehenden Balls (bei hohen Topspin-Bällen auf die Rückhand zusätzlich der Rückhandtyp), Schnelligkeit, Spielintelligenz (Startposition), Energie, Momentum.
 
 **Ergebnis:**
 
@@ -58,7 +58,7 @@ Siehe [04 Taktik](04-taktik.md) für die Regler.
 
 Gelingt der Schlag?
 
-**Einflüsse:** kombinierter Wert aus Seite und Schlagtyp (siehe [05 Attribute](05-attribute.md)), Schwierigkeit der Ankunft, Risiko, Energie, Momentum, bei wichtigen Punkten die mentale Stärke.
+**Einflüsse:** kombinierter Wert aus Seite und Schlagtyp (siehe [05 Attribute](05-attribute.md); bei Rückhandschlägen modifiziert ihn der Rückhandtyp), Belag, Schwierigkeit der Ankunft, Risiko, Energie, Momentum, bei wichtigen Punkten die mentale Stärke.
 
 **Ergebnis:**
 
@@ -129,6 +129,16 @@ Der Return wird wie ein Rallyeschlag aufgelöst, mit dem Attribut **Return** in 
 
 - **sicher:** tief in die Mitte, Ballwechsel neutralisieren
 - **aggressiv:** Angriff mit dem Return, höhere Fehlerquote
+
+## Belag
+
+Der **Belag** ist, wie das Zählformat, ein Parameter des Matches (siehe [01 Match-Loop](01-match-loop.md)). Vorgesehen sind drei Beläge: **Sand**, **Rasen** und **Hartplatz**.
+
+Der Belag beeinflusst, wie gut die einzelnen Schlagtypen und Aufschlagtypen gelingen. Er wirkt in der **Ausführung** (Schritt 3) als Bonus oder Malus je Typ, zusätzlich zu den Attributen des Spielers. Die Richtung ist vorgegeben: Slice ist zum Beispiel auf Rasen stärker, Topspin auf Sand. So verschiebt der Belag, welche Taktik und welche Spielertypen im Vorteil sind.
+
+Der Belag ändert die Regelkette der Schlagauflösung nicht, sondern nur die Werte, mit denen sie rechnet. Jeder Belag hat dafür je Schlag- und Aufschlagtyp einen eigenen Ausgleichswert; die Zahlen stehen im [Balancing](balancing.md).
+
+**Im MVP** wird kein Belag-Einfluss angewendet: Alle Ausgleichswerte sind neutral. Das Design ist aber so angelegt, dass Beläge später ergänzt werden können, ohne die Schlagauflösung zu verändern. Offen ist unter anderem, ob der Belag zusätzlich Ankunft, Laufwege oder Energieverbrauch beeinflusst (siehe [Offene Fragen](offene-fragen.md)).
 
 ## Einfluss von Energie und Momentum
 

@@ -1,5 +1,7 @@
 # 03 – Energie & Momentum
 
+Dieses Dokument beschreibt das **vollständige Konzept**. Welche Teile davon im MVP aktiv sind, wird später entschieden (siehe [Offene Fragen](offene-fragen.md)).
+
 ## Energie
 
 ### Grundprinzip
@@ -29,7 +31,7 @@ Dadurch entsteht eine Abwägung: Aggressives Spiel ist pro Schlag teurer, verkü
 Die Höhe hängt vom Attribut **Regeneration** ab.
 
 - Regeneration füllt den Vorrat **nie vollständig** auf.
-- Optional: Die Regeneration wird umso schwächer, je länger das Match dauert.
+- Die Regeneration wird umso schwächer, je länger das Match dauert.
 
 ### Auswirkungen
 
