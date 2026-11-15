@@ -23,6 +23,7 @@ Zusammenfassung des aktuellen Stands. Die Begründungen stehen in den [ADRs](adr
 | Tests             | Vitest, fast-check, Playwright, ESLint, Prettier            | [0008](adr/0008-teststrategie.md)                             |
 | Auslieferung      | Statisch, ohne Backend; Art der Auslieferung zurückgestellt | [0009](adr/0009-statische-anwendung-ohne-backend.md)          |
 | Automatisierung   | Claude-Action, ausgelöst per Label `claude-umsetzen`        | [0010](adr/0010-automatische-issue-umsetzung.md)              |
+| Entscheidungen    | Klären und Übernehmen per Labels, getrennte Workflows       | [0011](adr/0011-entscheidungs-issues-per-label.md)            |
 
 ## Bausteine
 

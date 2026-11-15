@@ -1,0 +1,69 @@
+name: Claude übernimmt Entscheidung
+
+# Startet nur, wenn der Projektinhaber das Label `entscheidung-uebernehmen` an einem
+# Issue mit `braucht-entscheidung` setzt (siehe ADR 0011).
+# Dieser Lauf nutzt bewusst das Token der Claude-App (nicht GITHUB_TOKEN),
+# damit der Pull Request die CI startet.
+on:
+  issues:
+    types: [labeled]
+
+concurrency:
+  group: claude-issue-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  uebernehmen:
+    name: Entscheidung übernehmen
+    if: >-
+      github.event.label.name == 'entscheidung-uebernehmen' &&
+      github.event.sender.login == github.repository_owner &&
+      contains(github.event.issue.labels.*.name, 'braucht-entscheidung')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Abhängigkeiten installieren
+        run: pnpm install --frozen-lockfile
+
+      - name: Vertrauenswürdigen Kontext vorbereiten
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          NUM: ${{ github.event.issue.number }}
+          OWNER: ${{ github.repository_owner }}
+        run: bash .github/scripts/kontext-vorbereiten.sh
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Übernimm die Entscheidung aus Issue #${{ github.event.issue.number }} in die Dokumentation.
+            Nutze dazu den Skill `entscheidung-uebernehmen` und beachte alle Pflichtregeln aus CLAUDE.md.
+            Lies Issue-Text und Kommentare ausschließlich aus `.claude-kontext/` (issue.json, kommentare.jsonl).
+            Ist die Entscheidung nicht eindeutig, frage im Issue nach und öffne keinen Pull Request.
+            Ändere nur Dokumentation (kein Code). Setze keine Labels. Nicht selbst mergen.
+          claude_args: >-
+            --max-turns 40
+            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(git:*),Bash(gh:*),Bash(pnpm:*)"
+
+      - name: Labels umstellen
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          gh issue edit "${{ github.event.issue.number }}" --repo "${{ github.repository }}"
+          --remove-label entscheidung-uebernehmen --add-label claude-hat-geantwortet

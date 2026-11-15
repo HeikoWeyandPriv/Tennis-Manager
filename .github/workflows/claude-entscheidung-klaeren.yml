@@ -1,0 +1,55 @@
+name: Claude klärt Entscheidung
+
+# Startet nur, wenn der Projektinhaber das Label `claude-antworten` setzt (siehe ADR 0011).
+# Dieser Lauf darf nur Issues kommentieren: kein Schreibzugriff auf Dateien.
+on:
+  issues:
+    types: [labeled]
+
+concurrency:
+  group: claude-issue-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  antworten:
+    name: Entscheidung klären
+    if: >-
+      github.event.label.name == 'claude-antworten' &&
+      github.event.sender.login == github.repository_owner
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
+      NUM: ${{ github.event.issue.number }}
+      OWNER: ${{ github.repository_owner }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Altes Status-Label entfernen
+        run: gh issue edit "$NUM" --repo "$REPO" --remove-label claude-hat-geantwortet || true
+
+      - name: Vertrauenswürdigen Kontext vorbereiten
+        run: bash .github/scripts/kontext-vorbereiten.sh
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Das GITHUB_TOKEN dieses Jobs hat nur Leserechte auf Dateien (siehe permissions).
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Kläre Issue #${{ github.event.issue.number }} im Dialog mit dem Projektinhaber.
+            Nutze dazu den Skill `entscheidung-klaeren` und beachte alle Pflichtregeln aus CLAUDE.md.
+            Lies Issue-Text und Kommentare ausschließlich aus `.claude-kontext/` (issue.json, kommentare.jsonl).
+            Ändere keine Dateien, lege keine Branches oder Pull Requests an und setze keine Labels.
+          claude_args: >-
+            --max-turns 25
+            --allowedTools "Read,Glob,Grep,Bash(gh issue comment:*),Bash(gh api:*)"
+
+      - name: Labels umstellen
+        if: success()
+        run: gh issue edit "$NUM" --repo "$REPO" --remove-label claude-antworten --add-label claude-hat-geantwortet
