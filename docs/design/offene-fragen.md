@@ -16,7 +16,6 @@
 
 - **Wirkung der Beläge:** Sand, Rasen und Hartplatz beeinflussen die Ausführung der Schlagtypen (siehe [02 Punktsimulation](02-punktsimulation.md)). Offen: Wie stark wirkt jeder Belag je Typ? Beeinflusst der Belag zusätzlich Ankunft, Laufwege oder Energieverbrauch? Wie wird einem Match sein Belag zugeordnet, z. B. über das Turnier?
 - **Umfang von Energie und Momentum im MVP:** Das Konzept ist vollständig beschrieben. Welche Teile (Abklingen, abnehmender Zuwachs, Comeback-Ausschläge, abgestufte Ausschläge, schwächere Regeneration bei langen Matches) im MVP aktiv sind, wird später entschieden.
-- **Kombinationsformel:** Wie genau werden Seite und Schlagtyp zu einem Ausführungswert verrechnet?
 
 ## Darstellung
 

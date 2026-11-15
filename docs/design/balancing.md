@@ -45,6 +45,7 @@ Dieses Dokument sammelt **konkrete Zahlenwerte**. Alle Werte sind **Platzhalter*
 | Parameter                        | Platzhalter | Anmerkung                                                   |
 | -------------------------------- | ----------- | ----------------------------------------------------------- |
 | Kombination Seite + Schlagtyp    | Mittelwert  | z. B. Vorhand 80 + Slice 40 → 60                            |
+| Anteil Seite an der Kombination  | 50 %        | Schlagtyp = Rest; bei 50 % genau der Mittelwert             |
 | Bonus/Malus Rückhandtyp          | offen       | Bonus auf Ausführung, Malus gegen hohen Topspin auf Ankunft |
 | Wirkung Körpergröße              | offen       | stetige Kurve über die Körpergröße in cm                    |
 | Zuwachs mentale Stärke pro Match | offen       | langsam, mit Obergrenze                                     |

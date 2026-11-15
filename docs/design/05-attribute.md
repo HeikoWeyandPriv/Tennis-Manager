@@ -36,7 +36,7 @@ Die Ausführung eines Rallyeschlags nutzt einen **kombinierten Wert aus Seite un
 
 > Beispiel: Vorhand 80 und Slice 40 ergeben einen Vorhand-Slice von etwa 60.
 
-Die genaue Formel ist Teil des [Balancings](balancing.md). Der Rückhandtyp (siehe unten) modifiziert die Rückhandkombinationen.
+Der kombinierte Wert ist der **einfache Mittelwert** aus Seite und Schlagtyp, sodass beide Attribute gleich stark wirken. Das Verhältnis soll später über das [Balancing](balancing.md) einstellbar sein; der Standard ist gleichgewichtet (Anteil Seite 50 %, Anteil Schlagtyp der Rest). Der Rückhandtyp (siehe unten) modifiziert die Rückhandkombinationen.
 
 ## Körperliche Attribute
 
