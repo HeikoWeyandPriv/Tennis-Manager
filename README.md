@@ -60,3 +60,11 @@ Die CI führt bei jedem Pull Request Formatierung, Typprüfung, Lint, Tests und 
 - **`main` ist geschützt.** Änderungen gelangen nur über Pull Requests dorthin.
 - Die Umsetzung erfolgt weitgehend agentisch mit Claude Code. Die Regeln dafür stehen in [`CLAUDE.md`](CLAUDE.md).
 - **Automatische Umsetzung:** Aufgaben-Issues mit dem Label `claude-umsetzen` setzt Claude per GitHub Action um und öffnet einen Pull Request ([ADR 0010](docs/architecture/adr/0010-automatische-issue-umsetzung.md)). Entscheidungs-Issues (`braucht-entscheidung`) werden weiterhin mit Claude Code besprochen.
+
+Drei Labels steuern den Ablauf:
+
+| Label                  | Bedeutung                                                                                                                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `claude-umsetzen`      | Der Projektinhaber gibt das Issue zur automatischen Umsetzung frei; Claude öffnet einen Pull Request und mergt nie selbst.                        |
+| `auto-schliessen`      | Nur der Projektinhaber setzt es: Claude hakt erfüllte Akzeptanzkriterien ab und der Pull Request nutzt `Closes #<nr>`; sonst gilt `Bezug: #<nr>`. |
+| `braucht-entscheidung` | Das Issue ist unklar oder widerspricht dem Design: Claude fragt nach und setzt keinen Code um; die Klärung erfolgt im Dialog, nicht automatisch.  |
