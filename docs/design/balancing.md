@@ -2,6 +2,13 @@
 
 Dieses Dokument sammelt **konkrete Zahlenwerte**. Alle Werte sind **Platzhalter** und werden beim Testen der Simulation angepasst. Später werden sie in Konfigurationsdateien überführt.
 
+## Wichtigkeit von Punkten
+
+| Parameter                               | Platzhalter | Anmerkung                                                                                      |
+| --------------------------------------- | ----------- | ---------------------------------------------------------------------------------------------- |
+| Stufen                                  | 0 bis 5     | entschieden (siehe [01 Match-Loop](01-match-loop.md#wichtigkeit-von-punkten)), keine Zuschläge |
+| Schwelle für „nur entscheidende Punkte“ | 3           | Platzhalter; ab dieser Stufe wird animiert, ggf. im Ansichtsmodus einstellbar                  |
+
 ## Momentum
 
 | Parameter                      | Platzhalter   | Anmerkung                                            |

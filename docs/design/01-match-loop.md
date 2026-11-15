@@ -49,17 +49,43 @@ Changeovers und Satzpausen haben zusätzlich eine spielmechanische Wirkung: Sie 
 
 ## Ansichtsmodi
 
-| Modus                        | Verhalten                                                                                                                                       |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Alle Punkte** (Default)    | Jeder Punkt wird animiert.                                                                                                                      |
-| **Nur entscheidende Punkte** | Nur wichtige Punkte werden animiert, z. B. Breakbälle, Satzbälle, Matchbälle, Tiebreaks. Welche Punkte genau dazugehören, ist noch festzulegen. |
-| **Games überspringen**       | Ganze Aufschlagspiele werden berechnet, man sieht nur das Ergebnis.                                                                             |
+| Modus                        | Verhalten                                                                                                                                      |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Alle Punkte** (Default)    | Jeder Punkt wird animiert.                                                                                                                     |
+| **Nur entscheidende Punkte** | Nur Punkte, deren Wichtigkeit mindestens der Schwelle entspricht, werden animiert (siehe [Wichtigkeit von Punkten](#wichtigkeit-von-punkten)). |
+| **Games überspringen**       | Ganze Aufschlagspiele werden berechnet, man sieht nur das Ergebnis.                                                                            |
 
 Die Logik berechnet **immer** jeden Punkt vollständig. Der Ansichtsmodus entscheidet nur, was animiert wird.
 
 Der Modus soll **während des Matches wechselbar** sein – spannt sich ein Satz zu, will man wieder jeden Punkt sehen.
 
 Zusätzlich ist ein **Geschwindigkeitsregler** für die Animation vorgesehen.
+
+## Wichtigkeit von Punkten
+
+Jeder Punkt hat eine **Wichtigkeit** (Stufe 0 bis 5): wie entscheidend er für das Gesamtmatch ist. Sie bezieht sich auf den **Punkt**, nicht auf einen Spieler, und ist eine reine Funktion des Spielstands. Die Wichtigkeit ist **nicht gedämpft**: Wie stark die Lage (z. B. 5:0 im Satz mit drei Matchbällen) den Druck verändert, gehört nur in die Druck-Berechnung (Issue #38).
+
+Es gilt immer die **höchste zutreffende Stufe**, es gibt keine Zuschläge. Ein Breakball oder Spielball, der zugleich den Satz oder das Match beenden kann, zählt als Satzball bzw. Matchball.
+
+| Stufe | Punkt im normalen Game                                                                              | Punkt im Tiebreak                        |
+| ----- | --------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| 5     | **Matchball:** Punkt kann das Match beenden                                                         | Matchball                                |
+| 4     | **Satzball:** Punkt kann den Satz beenden                                                           | Satzball                                 |
+| 3     | **Breakball:** Punkt kann das Aufschlagspiel des Gegners gewinnen (ohne Satz oder Match zu beenden) | Gleichstand ab „Tiebreak-Punkte minus 2“ |
+| 2     | **Spielball:** Punkt kann das eigene Aufschlagspiel gewinnen (ohne Satz oder Match zu beenden)      | alle übrigen Tiebreak-Punkte             |
+| 1     | 30:30 oder Einstand, in jedem Game                                                                  | –                                        |
+| 0     | alle anderen Punkte                                                                                 | –                                        |
+
+Tiebreak:
+
+- Ein Tiebreak ist ein Game, daher gibt es dort keinen Breakball und keinen Spielball. Die Stufen 2 und 3 gelten dort direkt.
+- Gleichstand zählt nur ab „Tiebreak-Punkte minus 2“ (Standard, Tiebreak bis 7: 5:5, 6:6, 7:7 …). Frühere Gleichstände wie 1:1 oder 3:3 haben Stufe 2.
+- Der Zielwert kommt aus dem Zählformat, nicht fest aus dem Code.
+
+Verwendung:
+
+- **Ansicht:** Im Modus „Nur entscheidende Punkte“ wird ein Punkt animiert, wenn seine Wichtigkeit mindestens der **Schwelle** entspricht. Die Schwelle ist ein Konfigurationswert (siehe [Balancing](balancing.md)). Bei Schwelle 2 oder weniger wird jeder Tiebreak-Punkt animiert, bei Schwelle 3 nur Tiebreak-Gleichstände, Breakbälle, Satzbälle und Matchbälle.
+- **Druck:** Die Wichtigkeit ist die Eingabe der Druck-Mechanik (siehe [03 Energie & Momentum](03-energie-momentum.md), Konzeption in Issue #38).
 
 ## Changeover-Bildschirm
 

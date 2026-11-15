@@ -85,4 +85,6 @@ Siehe [05 Attribute](05-attribute.md).
 
 ## Wichtige Punkte (Druck)
 
-Bei wichtigen Punkten (Breakbälle, Satzbälle, Matchbälle) beeinflusst die **mentale Stärke** die Ausführung. Mental schwache Spieler machen dort mehr Fehler.
+Bei wichtigen Punkten beeinflusst die **mentale Stärke** die Ausführung. Mental schwache Spieler machen dort mehr Fehler.
+
+Wie wichtig ein Punkt ist, legt die **Wichtigkeit** fest (siehe [01 Match-Loop](01-match-loop.md#wichtigkeit-von-punkten)). Wie genau sie auf die Ausführung wirkt, einschließlich Dämpfung durch die Lage und Bezug auf den einzelnen Spieler, ist offen und wird in Issue #38 geklärt.
