@@ -9,6 +9,14 @@ Dieses Dokument sammelt **konkrete Zahlenwerte**. Alle Werte sind **Platzhalter*
 | Stufen                                  | 0 bis 5     | entschieden (siehe [01 Match-Loop](01-match-loop.md#wichtigkeit-von-punkten)), keine Zuschläge |
 | Schwelle für „nur entscheidende Punkte“ | 3           | Platzhalter; ab dieser Stufe wird animiert, ggf. im Ansichtsmodus einstellbar                  |
 
+## Animationstempo
+
+| Parameter            | Platzhalter             | Anmerkung                                                                                             |
+| -------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------- |
+| Reglerstufen         | 1x, 1,25x, 1,5x, 2x, 4x | Startwerte (entschieden, Issue #14); 1x entspricht etwa der realen Geschwindigkeit eines Ballwechsels |
+| Standardstufe        | 1x                      | Start jedes Matches; Stufe gilt im MVP nur pro Match                                                  |
+| Richtwert Matchdauer | keiner                  | bewusst kein Zeitziel; gegebenenfalls später aus gemessener Spielzeit des Prototyps ableiten          |
+
 ## Archetypen im MVP
 
 | Parameter                               | Platzhalter      | Anmerkung                                                                           |

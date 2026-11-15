@@ -59,7 +59,14 @@ Die Logik berechnet **immer** jeden Punkt vollständig. Der Ansichtsmodus entsch
 
 Der Modus soll **während des Matches wechselbar** sein – spannt sich ein Satz zu, will man wieder jeden Punkt sehen.
 
-Zusätzlich ist ein **Geschwindigkeitsregler** für die Animation vorgesehen.
+### Geschwindigkeit und Pause
+
+- Im MVP gibt es einen **Geschwindigkeitsregler** für die Animation mit den Stufen **1x, 1,25x, 1,5x, 2x und 4x** (Startwerte, siehe [Balancing](balancing.md#animationstempo)). **1x** entspricht etwa der realen Geschwindigkeit eines Ballwechsels.
+- Es gibt **keinen festen Richtwert für die Matchdauer**. Die Dauer ergibt sich aus Ansichtsmodus und Geschwindigkeit.
+- Der Regler ist **jederzeit wechselbar**, auch während eines Ballwechsels. Für die Wartezeiten zwischen den Punkten gilt für die Geschwindigkeit dieselbe Regel wie für das Spiel; was dort inhaltlich passiert, wird in Issue #56 geklärt.
+- Das Match kann **jederzeit pausiert** werden (nur Pause und Weiter, keine Taktikänderung).
+- Die gewählte Stufe gilt im MVP **nur pro Match**; ein neues Match startet mit 1x. Eine globale Spieleinstellung ist später möglich.
+- Tempo und Pause betreffen nur die Darstellung und ändern nie das Ergebnis eines Matches.
 
 ## Wichtigkeit von Punkten
 
