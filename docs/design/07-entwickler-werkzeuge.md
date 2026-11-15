@@ -38,3 +38,5 @@ Zusätzlich zur normalen Geschwindigkeit lässt sich das Match **pausieren** und
 ## Abgrenzung zum Match-Start
 
 Der Entwicklermodus ändert nichts am Einstellen vor dem Match (siehe [01 Match-Loop](01-match-loop.md) und [05 Attribute](05-attribute.md)). Er legt nur fest, ob ein Match mit Entwickler-Werkzeugen läuft.
+
+Die Einstiegsmaske mit **Archetyp-Auswahl und Attribut-Editor** vor dem Match ist im MVP **immer sichtbar** und nicht an den Entwicklermodus gekoppelt. Sie ist zwar ein Entwicklerwerkzeug im Sinn von „nicht Teil des fertigen Spiels“ und kann später abschaltbar sein oder entfallen, gehört aber nicht zu den Entwickler-Werkzeugen des Entwicklermodus (Details: [05 Attribute](05-attribute.md#archetypen-und-standardprofile-im-mvp)).
