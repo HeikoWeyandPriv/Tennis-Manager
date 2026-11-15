@@ -11,14 +11,17 @@ Getroffene Designentscheidungen mit kurzer Begründung. Neueste Einträge oben i
 
 ## Match-Loop
 
-| Entscheidung                                                                                | Begründung                                                                 |
-| ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| **Zählformat als Parameter** eines Matches; erste Variante „Standard“.                      | Reale Turniere zählen verschieden; Varianten sollen ergänzbar sein.        |
-| Matches werden in einer **Draufsicht** simuliert; jeder Punkt ist verfolgbar.               | Taktik soll sichtbar und nachvollziehbar sein.                             |
-| Taktische Anpassungen nur beim **Changeover**.                                              | Natürlicher Rhythmus mit klaren Entscheidungsmomenten.                     |
-| **Drei Ansichtsmodi:** alle Punkte (Default), nur entscheidende Punkte, Games überspringen. | Matches können sonst sehr lang werden.                                     |
-| Changeover zeigt **Grundinformationen wie bei TV-Übertragungen**.                           | Spieler soll das Match selbst lesen; tiefere Analysen später über Coaches. |
-| **Gegnerische KI** wird später geklärt.                                                     | Erst sollen Simulation, Taktik und Attribute stehen.                       |
+| Entscheidung                                                                                                                                                                                            | Begründung                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Nach dem Matchende zeigt der **Ergebnisbildschirm** Endstand, vollständige Statistik und **Momentum-Verlauf pro Punkt** (mit Satz- und Aufschlagspiel-Grenzen); nur Momentum, keine Energie. Issue #16. | Statistiken und Momentum sind der Anlass, das Match im Rückblick zu lesen und zu lernen.                     |
+| Nach dem Match wird **nichts Verborgenes aufgedeckt** (weder Tendenzen noch Energie des Gegners). Issue #16.                                                                                            | Das Prinzip „das Match lesen“ gilt auch im Rückblick.                                                        |
+| Im MVP **zwei Optionen nach dem Match:** Match nochmal starten (gleiche Einstellungen) oder neues Match (Attribute und Tendenzen neu einstellen). Zufallsstart beim „Nochmal“: Issue #35. Issue #16.    | Ohne Karriere braucht das MVP einen sinnvollen Abschluss; mit nur einem Gegner ist ein Rematch das Mindeste. |
+| **Zählformat als Parameter** eines Matches; erste Variante „Standard“.                                                                                                                                  | Reale Turniere zählen verschieden; Varianten sollen ergänzbar sein.                                          |
+| Matches werden in einer **Draufsicht** simuliert; jeder Punkt ist verfolgbar.                                                                                                                           | Taktik soll sichtbar und nachvollziehbar sein.                                                               |
+| Taktische Anpassungen nur beim **Changeover**.                                                                                                                                                          | Natürlicher Rhythmus mit klaren Entscheidungsmomenten.                                                       |
+| **Drei Ansichtsmodi:** alle Punkte (Default), nur entscheidende Punkte, Games überspringen.                                                                                                             | Matches können sonst sehr lang werden.                                                                       |
+| Changeover zeigt **Grundinformationen wie bei TV-Übertragungen**.                                                                                                                                       | Spieler soll das Match selbst lesen; tiefere Analysen später über Coaches.                                   |
+| **Gegnerische KI** wird später geklärt.                                                                                                                                                                 | Erst sollen Simulation, Taktik und Attribute stehen.                                                         |
 
 ## Simulation
 
