@@ -73,6 +73,10 @@ Die Qualität bestimmt, wie präzise die Zielzone getroffen wird und wie schwer 
 
 Der Ball landet in der Zielzone. Der Gegner beginnt wieder bei Schritt 1.
 
+### Ereignisse für die Darstellung
+
+Die Engine liefert pro Punkt eine Ereignisliste, Schlag für Schlag, und zu jedem Schlag unter anderem den **Aufsetzpunkt** des Balls als Koordinate (auch außerhalb des Feldes, deterministisch aus dem Zufallsgenerator). Schnittstelle: [ADR 0012](../architecture/adr/0012-ereignisliste-schnittstelle-engine-darstellung.md); Darstellung: [06 Darstellung](06-darstellung.md). Ob die 3 × 3 Zielzonen bleiben oder durch Koordinaten ersetzt werden, klärt Issue #51; bis dahin gilt dieses Dokument unverändert.
+
 ### Punktende
 
 Ein Punkt endet durch:

@@ -14,6 +14,13 @@
 - **Umfang von Energie und Momentum im MVP:** Das Konzept ist vollständig beschrieben. Welche Teile (Abklingen, abnehmender Zuwachs, Comeback-Ausschläge, abgestufte Ausschläge, schwächere Regeneration bei langen Matches) im MVP aktiv sind, wird später entschieden.
 - **Kombinationsformel:** Wie genau werden Seite und Schlagtyp zu einem Ausführungswert verrechnet?
 
+## Darstellung
+
+- **Optimaler Schlagort:** Ob die Darstellung einen „optimalen Schlagort“ (Koordinate, zu der der Spieler läuft) kennt und wie sich daraus die Ankunft ergibt, ist offen. Wird in Issue #51 entschieden.
+- **Zonenmodell:** Bleiben die 3 × 3 Zielzonen, oder werden sie durch Koordinaten ersetzt? Issue #51. Der Aufsetzpunkt als Koordinate gilt unabhängig davon.
+- **Sound:** Schiedsrichteransage des Spielstands und weitere Geräusche kommen im Design noch nicht vor; eigenes Issue.
+- **Optional später:** Händigkeit und Rückhandtyp könnten sich in der Spielerfigur zeigen (kein MVP-Muss, nicht entschieden).
+
 ## Später
 
 - **Coaches:** Welche Coach-Typen gibt es, und was verbessern sie? (Idee aus der Konzeptphase: Coaches verbessern vor allem die Qualität der Informationen beim Changeover.)

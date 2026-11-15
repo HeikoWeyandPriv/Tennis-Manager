@@ -12,18 +12,19 @@ Zusammenfassung des aktuellen Stands. Die Begründungen stehen in den [ADRs](adr
 
 ## Tech-Stack
 
-| Bereich           | Wahl                                                        | ADR                                                           |
-| ----------------- | ----------------------------------------------------------- | ------------------------------------------------------------- |
-| Technologie       | Web-Technik, TypeScript (strikt)                            | [0002](adr/0002-web-technik-mit-typescript.md)                |
-| Architektur       | Eigenständige, deterministische Engine                      | [0003](adr/0003-trennung-engine-oberflaeche-darstellung.md)   |
-| Struktur          | pnpm-Workspace mit `engine` und `app`                       | [0004](adr/0004-projektstruktur-pnpm-workspace.md)            |
-| Oberfläche        | React, Vite, Zustand                                        | [0005](adr/0005-react-fuer-die-oberflaeche.md)                |
-| Match-Darstellung | PixiJS                                                      | [0006](adr/0006-pixijs-fuer-die-match-darstellung.md)         |
-| Persistenz        | IndexedDB (Dexie), Export/Import, versionierte Spielstände  | [0007](adr/0007-persistenz-indexeddb-export-versionierung.md) |
-| Tests             | Vitest, fast-check, Playwright, ESLint, Prettier            | [0008](adr/0008-teststrategie.md)                             |
-| Auslieferung      | Statisch, ohne Backend; Art der Auslieferung zurückgestellt | [0009](adr/0009-statische-anwendung-ohne-backend.md)          |
-| Automatisierung   | Claude-Action, ausgelöst per Label `claude-umsetzen`        | [0010](adr/0010-automatische-issue-umsetzung.md)              |
-| Entscheidungen    | Klären und Übernehmen per Labels, getrennte Workflows       | [0011](adr/0011-entscheidungs-issues-per-label.md)            |
+| Bereich           | Wahl                                                        | ADR                                                                |
+| ----------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ |
+| Technologie       | Web-Technik, TypeScript (strikt)                            | [0002](adr/0002-web-technik-mit-typescript.md)                     |
+| Architektur       | Eigenständige, deterministische Engine                      | [0003](adr/0003-trennung-engine-oberflaeche-darstellung.md)        |
+| Struktur          | pnpm-Workspace mit `engine` und `app`                       | [0004](adr/0004-projektstruktur-pnpm-workspace.md)                 |
+| Oberfläche        | React, Vite, Zustand                                        | [0005](adr/0005-react-fuer-die-oberflaeche.md)                     |
+| Match-Darstellung | PixiJS                                                      | [0006](adr/0006-pixijs-fuer-die-match-darstellung.md)              |
+| Persistenz        | IndexedDB (Dexie), Export/Import, versionierte Spielstände  | [0007](adr/0007-persistenz-indexeddb-export-versionierung.md)      |
+| Tests             | Vitest, fast-check, Playwright, ESLint, Prettier            | [0008](adr/0008-teststrategie.md)                                  |
+| Auslieferung      | Statisch, ohne Backend; Art der Auslieferung zurückgestellt | [0009](adr/0009-statische-anwendung-ohne-backend.md)               |
+| Automatisierung   | Claude-Action, ausgelöst per Label `claude-umsetzen`        | [0010](adr/0010-automatische-issue-umsetzung.md)                   |
+| Entscheidungen    | Klären und Übernehmen per Labels, getrennte Workflows       | [0011](adr/0011-entscheidungs-issues-per-label.md)                 |
+| Ereignisse        | Ereignisliste je Punkt für die Darstellung                  | [0012](adr/0012-ereignisliste-schnittstelle-engine-darstellung.md) |
 
 ## Bausteine
 
