@@ -9,6 +9,15 @@ Dieses Dokument sammelt **konkrete Zahlenwerte**. Alle Werte sind **Platzhalter*
 | Stufen                                  | 0 bis 5     | entschieden (siehe [01 Match-Loop](01-match-loop.md#wichtigkeit-von-punkten)), keine Zuschläge |
 | Schwelle für „nur entscheidende Punkte“ | 3           | Platzhalter; ab dieser Stufe wird animiert, ggf. im Ansichtsmodus einstellbar                  |
 
+## Archetypen im MVP
+
+| Parameter                               | Platzhalter      | Anmerkung                                                                           |
+| --------------------------------------- | ---------------- | ----------------------------------------------------------------------------------- |
+| Attributwerte Konterspieler             | offen            | Profil siehe [05 Attribute](05-attribute.md); gleiches Gesamtniveau wie die anderen |
+| Attributwerte Aufschlagriese            | offen            | Profil siehe [05 Attribute](05-attribute.md)                                        |
+| Attributwerte Künstler                  | offen            | Profil siehe [05 Attribute](05-attribute.md)                                        |
+| Mentale Stärke, Selbstvertrauen (Start) | mittel / neutral | entschieden: Selbstvertrauen neutral, Momentum startet bei 0; Zahlenwert offen      |
+
 ## Momentum
 
 | Parameter                      | Platzhalter   | Anmerkung                                            |
