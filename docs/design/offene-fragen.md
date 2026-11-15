@@ -8,11 +8,22 @@
 - **Herkunft der Attribute im fertigen Spiel:** Im MVP gibt es drei Archetypen und eine Einstiegsmaske (siehe [05 Attribute](05-attribute.md)). Im fertigen Spiel kommen die Attribute aus dem Spielkontext; offen ist, woher sie dort konkret kommen (Karriere, Turnier, vorbereitete Profile) und ob die Maske bleibt. Der Match-Start wird in Issue #35 geklärt.
 - **Matchdauer und Animationstempo:** Wie lange darf ein Match im Modus „alle Punkte“ maximal dauern?
 
+## Darstellung
+
+- **Kommentarzeile nach dem MVP:** Textbausteine und Mustererkennung für Ballwechsel, inklusive Kommentare wie „wirkt müde“ (siehe [06 Darstellung](06-darstellung.md)). Im MVP nicht enthalten.
+
 ## Simulation
 
 - **Wirkung der Beläge:** Sand, Rasen und Hartplatz beeinflussen die Ausführung der Schlagtypen (siehe [02 Punktsimulation](02-punktsimulation.md)). Offen: Wie stark wirkt jeder Belag je Typ? Beeinflusst der Belag zusätzlich Ankunft, Laufwege oder Energieverbrauch? Wie wird einem Match sein Belag zugeordnet, z. B. über das Turnier?
 - **Umfang von Energie und Momentum im MVP:** Das Konzept ist vollständig beschrieben. Welche Teile (Abklingen, abnehmender Zuwachs, Comeback-Ausschläge, abgestufte Ausschläge, schwächere Regeneration bei langen Matches) im MVP aktiv sind, wird später entschieden.
 - **Kombinationsformel:** Wie genau werden Seite und Schlagtyp zu einem Ausführungswert verrechnet?
+
+## Darstellung
+
+- **Optimaler Schlagort:** Ob die Darstellung einen „optimalen Schlagort“ (Koordinate, zu der der Spieler läuft) kennt und wie sich daraus die Ankunft ergibt, ist offen. Wird in Issue #51 entschieden.
+- **Zonenmodell:** Bleiben die 3 × 3 Zielzonen, oder werden sie durch Koordinaten ersetzt? Issue #51. Der Aufsetzpunkt als Koordinate gilt unabhängig davon.
+- **Sound:** Schiedsrichteransage des Spielstands und weitere Geräusche kommen im Design noch nicht vor; eigenes Issue.
+- **Optional später:** Händigkeit und Rückhandtyp könnten sich in der Spielerfigur zeigen (kein MVP-Muss, nicht entschieden).
 
 ## Später
 

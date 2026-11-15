@@ -13,6 +13,19 @@ Matches werden in einer **Draufsicht** dargestellt. Jeder Punkt kann verfolgt we
 
 Die Darstellung erfindet keine Ereignisse; sie visualisiert ausschließlich, was die Logik berechnet hat.
 
+## Darstellung eines Ballwechsels
+
+Entschieden in Issue #34. Die Darstellung zeigt nur, was die Engine als Ereignisse liefert (siehe [ADR 0012](../architecture/adr/0012-ereignisliste-schnittstelle-engine-darstellung.md)).
+
+- **Reine Draufsicht.** Keine Seitenansicht, keine schräge Perspektive.
+- **Höhe über Ballgröße:** Je höher der Ball fliegt, desto größer wird er (näher am Beobachter), ein Lob zeigt sich also als deutlich größerer Ball.
+- **Aufsetzpunkt:** Ein kleiner Marker zeigt, wo der Ball den Boden berührt, auch außerhalb des Feldes. Das macht knappe Ausbälle erkennbar. Die Koordinate liefert die Engine; die Darstellung wählt sie nicht selbst.
+- **Schlagtyp erkennbar** über **Flugbahn, Farbe der Ballspur und Geschwindigkeit**. Es gibt keine zusätzlichen Formunterschiede.
+- **Ablauf pro Schlag:** Der Spieler läuft los, während der Ball fliegt. Kurz vor dem Ball holt er mit dem Schläger aus. Das Treffen des Balls oder das Nichterreichen ist die **Ankunft**.
+- **Aufschläge** werden normal durchgeführt und dargestellt, Fehler (Netz, Aus) sind zu sehen. Ein zweiter Aufschlag folgt wie im Tennis. Keine Sonderdarstellung.
+- **Punktende:** Der neue Spielstand wird über dem Platz eingeblendet. Die **Art des Punktendes** (Winner, Fehler, Ass) wird **nicht** zusätzlich angezeigt. Eine Schiedsrichteransage per Sound ist ein eigenes Thema (siehe [Offene Fragen](offene-fragen.md)).
+- **Spieler** werden von oben stark reduziert dargestellt; Schlägerschwung und Ballkontakt sind erkennbar.
+
 ## Taktik sichtbar machen
 
 Ziel: Der Spieler soll erkennen, **welche taktischen Mittel angewendet werden**.
@@ -27,12 +40,26 @@ Ziel: Der Spieler soll erkennen, **welche taktischen Mittel angewendet werden**.
 
 Einblendungen und Kommentarzeile sind **abschaltbar**.
 
+### Umfang im MVP
+
+Die Taktik des Gegners wird über sein **sichtbares Verhalten** erkennbar, z. B. über die verwendeten Schlagtypen. Gezeigt wird nur, was gespielt wurde, nie die eingestellte Tendenz.
+
+| Mittel                  | MVP                                                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------------------------------- |
+| Positionen              | ja                                                                                                    |
+| Flugkurven je Schlagtyp | ja                                                                                                    |
+| Farbige Ballspuren      | ja                                                                                                    |
+| Einblendungen           | ja, **standardmäßig an**, für **beide Spieler**, abschaltbar                                          |
+| Kommentarzeile          | nein, folgt nach dem MVP (siehe [Offene Fragen](offene-fragen.md)); abschaltbar, sobald sie existiert |
+
+Die konkrete Darstellung eines Ballwechsels (Bedeutung der Ballspur-Farben, Dauer und Ort der Einblendungen, Ablauf der Animation) wird in Issue #34 festgelegt.
+
 ## Indirekte Ermüdungshinweise
 
 Die Energie des Gegners ist verborgen (siehe [03 Energie & Momentum](03-energie-momentum.md)). Sie wird indirekt sichtbar über:
 
-- langsamere Laufanimationen
-- Kommentare wie „wirkt müde“
+- langsamere Laufanimationen (im MVP der einfache Ermüdungshinweis)
+- Kommentare wie „wirkt müde“ (gehören zur Kommentarzeile, folgen nach dem MVP)
 - steigende Fehlerzahlen in den Statistiken
 
 ## Weitere UI-Elemente im Match
