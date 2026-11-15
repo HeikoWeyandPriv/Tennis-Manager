@@ -84,11 +84,22 @@ Im MVP können die Attribute **beider Spieler vor dem Match frei eingestellt** w
 
 Die Einstellung legt das **Ausgangsprofil** für das Match fest. Sie ist keine Veränderung im Sinne der Kategorien oben, zum Beispiel bleiben angeborene Eigenschaften in einer Karriere unveränderlich.
 
-Im MVP geschieht das über eine explizite Einstiegsmaske vor dem Match. Im fertigen Spiel werden die Attribute nicht mehr explizit eingestellt, sondern kommen aus dem Spielkontext. Das gilt nur für Attribute, nicht für Tendenzen: Das Einstellen der Tendenzen bleibt ein Design-Merkmal vor dem Match. Den Aufbau des Match-Starts klärt Issue #35, die Herkunft der Attribute im Spielkontext bleibt offen (siehe [Offene Fragen](offene-fragen.md)).
+Im MVP geschieht das über eine explizite Einstiegsmaske vor dem Match. Sie ist im MVP **immer sichtbar** und nicht an den Entwicklermodus gekoppelt. Im fertigen Spiel werden die Attribute nicht mehr explizit eingestellt, sondern kommen aus dem Spielkontext. Das gilt nur für Attribute, nicht für Tendenzen: Das Einstellen der Tendenzen bleibt ein Design-Merkmal vor dem Match. Den Aufbau des Match-Starts klärt Issue #35, die Herkunft der Attribute im Spielkontext bleibt offen (siehe [Offene Fragen](offene-fragen.md)).
 
 Der Entwicklermodus ändert daran nichts (siehe [07 Entwickler-Werkzeuge](07-entwickler-werkzeuge.md)).
 
+### Archetypen und Standardprofile im MVP
+
+- In der Einstiegsmaske wählt man für jeden Spieler einen von **drei Archetypen**: **Konterspieler**, **Aufschlagriese**, **Künstler** (Profile siehe [Spielertypen](#spielertypen-beispiele)). Danach sind **alle Attribute** beider Spieler weiter anpassbar.
+- **Standard-Paarung:** Konterspieler (eigener Spieler) gegen Aufschlagriese. Beide sind **gleich stark** (gleiches Gesamtniveau, gegensätzliches Profil, nicht identische Werte).
+- **Mentale Attribute:** Alle Startwerte sind mittel bzw. neutral. Das Selbstvertrauen ist neutral, das Momentum startet bei 0.
+- **Händigkeit:** Sie ist im MVP ein änderbares Attribut. Die Standardvorgabe ist zufällig; die Zufallsauswahl kommt aus dem Seed des Spielzustands (kein `Math.random`, siehe [ADR 0003](../architecture/adr/0003-trennung-engine-oberflaeche-darstellung.md)).
+- **Charakter der Maske:** Archetyp-Auswahl und Attribut-Editor sind im MVP ein **Entwicklerwerkzeug im Sinn von „nicht Teil des fertigen Spiels“**. Sie können später aktivierbar und deaktivierbar sein oder ganz entfallen.
+- Die konkreten Attributwerte der Archetypen entstehen im [Balancing](balancing.md), nicht in diesem Dokument.
+
 ## Spielertypen (Beispiele)
+
+Die drei Typen sind im MVP die auswählbaren **Archetypen** (siehe oben).
 
 | Typ                | Profil                                                                                          |
 | ------------------ | ----------------------------------------------------------------------------------------------- |
