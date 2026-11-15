@@ -84,7 +84,9 @@ Im MVP können die Attribute **beider Spieler vor dem Match frei eingestellt** w
 
 Die Einstellung legt das **Ausgangsprofil** für das Match fest. Sie ist keine Veränderung im Sinne der Kategorien oben, zum Beispiel bleiben angeborene Eigenschaften in einer Karriere unveränderlich.
 
-Die Möglichkeit ist nicht nur als Hilfsmittel für das MVP gedacht, sondern soll im fertigen Spiel in irgendeiner Form erhalten bleiben. In welcher Form, ist offen (siehe [Offene Fragen](offene-fragen.md)).
+Im MVP geschieht das über eine explizite Einstiegsmaske vor dem Match. Im fertigen Spiel werden die Attribute nicht mehr explizit eingestellt, sondern kommen aus dem Spielkontext. Das gilt nur für Attribute, nicht für Tendenzen: Das Einstellen der Tendenzen bleibt ein Design-Merkmal vor dem Match. Den Aufbau des Match-Starts klärt Issue #35, die Herkunft der Attribute im Spielkontext bleibt offen (siehe [Offene Fragen](offene-fragen.md)).
+
+Der Entwicklermodus ändert daran nichts (siehe [07 Entwickler-Werkzeuge](07-entwickler-werkzeuge.md)).
 
 ## Spielertypen (Beispiele)
 

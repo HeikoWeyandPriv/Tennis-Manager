@@ -5,7 +5,7 @@
 - **Gegnerische KI:** Wie erkennt sie Muster des Spielers? Wie und wie stark passt sie ihre Tendenzen beim Changeover an? Welche Rolle spielt die Spielintelligenz dabei?
 - **Entscheidende Punkte:** Welche Punkte zählen im Ansichtsmodus „nur entscheidende Punkte“ genau? (Breakbälle, Satzbälle, Tiebreaks sicher – auch 30:30 und Einstand?)
 - **Weitere Zählformate:** Die Variante „Standard“ ist festgelegt (zwei Gewinnsätze, Tiebreak in allen Sätzen, Einstand mit Vorteil). Offen: Welche realen Turnierformate kommen dazu (andere Gewinnsätze, Games pro Satz, Tiebreak-Punkte), und wie wird einem Match sein Zählformat zugeordnet, z. B. über das Turnier?
-- **Beispielspieler im MVP:** Die Attribute beider Spieler sind vor dem Match einstellbar. Offen: Gibt es zusätzlich vorbereitete Spielerprofile als Startwerte (Paarung, Stärkeverhältnis, Händigkeit, mentale Startwerte)? In welcher Form bleibt das Einstellen der Attribute im fertigen Spiel erhalten?
+- **Beispielspieler im MVP:** Die Attribute beider Spieler sind vor dem Match einstellbar. Offen: Gibt es zusätzlich vorbereitete Spielerprofile als Startwerte (Paarung, Stärkeverhältnis, Händigkeit, mentale Startwerte)? Im fertigen Spiel kommen die Attribute aus dem Spielkontext (siehe [05 Attribute](05-attribute.md)); offen ist, woher sie dort konkret kommen (Karriere, Turnier, vorbereitete Profile). Der Match-Start wird in Issue #35 geklärt.
 - **Matchdauer und Animationstempo:** Wie lange darf ein Match im Modus „alle Punkte“ maximal dauern?
 
 ## Simulation
