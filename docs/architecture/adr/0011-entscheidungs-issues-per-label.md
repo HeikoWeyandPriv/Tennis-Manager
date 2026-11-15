@@ -35,3 +35,4 @@ Klären und Festschreiben haben unterschiedliche Ziele und brauchen unterschiedl
 - Jede Antwortrunde ist ein Lauf und verbraucht das Nutzungskontingent des Claude-Abos.
 - Der Workflow zu `issue-umsetzen` filtert Kommentare nicht per Skript, sondern nur per Anweisung im Skill (Regel 11). Das Skript könnte dort später ebenfalls eingebunden werden.
 - Die Nacharbeit an Pull Requests nach einem Review ist noch offen (#32) und wird in einem eigenen ADR oder als Ergänzung hier festgehalten.
+- **Concurrency:** Jedes Label-Ereignis startet alle Claude-Workflows. Nur Läufe mit dem passenden Auslöser-Label teilen sich die Gruppe `claude-issue-<nr>` und laufen nacheinander. Übersprungene Läufe erhalten eine eigene Gruppe, damit sie echte Läufe nicht abbrechen (Fehlerbild in #39).
