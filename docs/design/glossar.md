@@ -12,6 +12,7 @@
 | **Entwickler-Werkzeuge** | Werkzeuge im Entwicklermodus: verborgene Werte und Zwischenergebnisse ansehen, Spielerwerte ändern, Match pausieren und einzeln schrittweise ausführen. |
 | **Einstand**             | Stand im Game, wenn beide Spieler mindestens 40 haben und gleichauf liegen; zum Gewinn braucht es zwei Punkte Vorsprung.                                |
 | **Energie**              | Vorrat an Kraft für das Match. Sinkt durch Schläge, Laufwege und Taktik; regeneriert teilweise in Pausen.                                               |
+| **Ergebnisbildschirm**   | Bildschirm nach dem Matchende: Endstand, vollständige Statistik und Momentum-Verlauf; von hier aus Match nochmal starten oder neues Match.              |
 | **Erzwungener Fehler**   | Fehler bei einer Ankunft unter Druck oder knapp.                                                                                                        |
 | **Game**                 | Aufschlagspiel im Satz, gezählt mit 0, 15, 30, 40, Einstand und Vorteil. Ein Tiebreak zählt als ein Game.                                               |
 | **Momentum**             | Gemeinsamer Tauziehen-Wert zwischen beiden Spielern; beeinflusst leicht alle Attribute.                                                                 |

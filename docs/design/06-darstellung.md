@@ -46,3 +46,10 @@ Die Energie des Gegners ist verborgen (siehe [03 Energie & Momentum](03-energie-
 ## Changeover-Bildschirm
 
 Inhalt siehe [01 Match-Loop](01-match-loop.md).
+
+## Ergebnisbildschirm
+
+Inhalt und Optionen für das Weiterspielen siehe [Nach dem Matchende in 01 Match-Loop](01-match-loop.md#nach-dem-matchende). Zur Darstellung:
+
+- **Momentum-Verlauf** als Verlaufsgrafik über alle Punkte des Matches, mit markierten Satzgrenzen und Aufschlagspiel-Grenzen. Gezeigt wird nur das Momentum, nicht die Energie.
+- Verborgene Werte des Gegners (Tendenzen, Energie) werden nicht eingeblendet.

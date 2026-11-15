@@ -8,6 +8,7 @@ Dieses Dokument beschreibt den **Ablauf** eines Matches: wann Punkte gespielt we
 2. **Punkte spielen:** Die Simulation berechnet jeden Punkt. Je nach Ansichtsmodus wird er animiert oder übersprungen.
 3. **Changeover:** Der Spieler sieht Statistiken, eigene Energie und Momentum und kann seine Tendenzen anpassen. Die gegnerische KI passt sich ebenfalls an.
 4. **Wiederholen** bis zum Matchende.
+5. **Nach dem Matchende:** Der Spieler sieht den Ergebnisbildschirm und entscheidet, wie es weitergeht (siehe [Nach dem Matchende](#nach-dem-matchende)).
 
 Ein Match hat feste Rahmenbedingungen: das **Zählformat** (siehe unten) und den **Belag** (siehe [02 Punktsimulation](02-punktsimulation.md)).
 
@@ -88,6 +89,27 @@ Zusätzlich ist ein **Geschwindigkeitsregler** für die Animation vorgesehen.
 Alle Taktik-Regler aus [04 Taktik](04-taktik.md) können verändert werden.
 
 Die **Tendenzen des Gegners sind nicht sichtbar.** Der Spieler muss sie aus Animation und Statistiken ableiten. Später können Coaches zusätzliche Analysen liefern.
+
+## Nach dem Matchende
+
+Im MVP gibt es keine Karriere. Nach dem Matchende sieht der Spieler den **Ergebnisbildschirm** und wählt, wie es weitergeht.
+
+### Ergebnisbildschirm
+
+- **Endstand** des Matches
+- **Vollständige Statistik** für das ganze Match, mit denselben Statistiken wie auf dem Changeover-Bildschirm (siehe Tabelle oben)
+- **Momentum-Verlauf** über das Match: Verlauf des Momentums **pro Punkt**, mit markierten **Satzgrenzen** und **Aufschlagspiel-Grenzen** (jedes Game wird als Aufschlagspiel des jeweiligen Aufschlägers markiert)
+
+Der Verlauf zeigt nur das Momentum, nicht die Energie. Es wird **nichts Verborgenes aufgedeckt**: weder die Tendenzen noch die Energie des Gegners. Das Prinzip „das Match lesen“ gilt auch im Rückblick; der Spieler leitet Schlüsse aus Statistiken und Momentum-Verlauf ab.
+
+Dafür muss die Engine das Momentum nach jedem Punkt im Spielzustand festhalten.
+
+### Weiter
+
+Der Spieler hat zwei Optionen:
+
+- **Match nochmal starten:** gleiches Match „genau so“, also mit den gleichen Einstellungen wie zuvor (Attribute und Start-Tendenzen). Ob dabei ein neuer Zufallsstart verwendet wird, wird mit dem Match-Start im MVP in Issue #35 entschieden.
+- **Neues Match:** zurück an den Anfang, Attribute und Tendenzen werden neu eingestellt wie beim ersten Start des MVP.
 
 ## Gegnerische KI
 
