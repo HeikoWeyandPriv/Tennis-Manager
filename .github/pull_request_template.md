@@ -1,6 +1,8 @@
 ## Bezug
 
-Closes #
+Bezug: #
+
+<!-- Nur bei Issues mit Label `auto-schliessen` und vollständig erfüllten, abgehakten Akzeptanzkriterien stattdessen: Closes # -->
 
 ## Was wurde geändert?
 
@@ -13,6 +15,7 @@ Closes #
 - [ ] Neue Architekturentscheidung? → ADR in `docs/architecture/adr/` angelegt und eingetragen.
 - [ ] Design geändert? → Design-Dokument und `docs/design/entscheidungslog.md` aktualisiert.
 - [ ] Keine Balancing-Werte fest im Code.
+- [ ] Pro Akzeptanzkriterium steht unten, wie es erfüllt wurde. Abgehakt habe ich sie nur bei Label `auto-schliessen`.
 - [ ] Tests vorhanden und grün (sobald es Code gibt).
 
 ## Offene Punkte
