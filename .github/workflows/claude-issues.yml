@@ -6,8 +6,13 @@ on:
   issues:
     types: [labeled]
 
+# Nur Läufe mit dem passenden Auslöser-Label teilen sich eine Gruppe pro Issue.
+# Alle anderen Läufe (übersprungen) erhalten eine eigene Gruppe und können echte Läufe nicht abbrechen.
 concurrency:
-  group: claude-issue-${{ github.event.issue.number }}
+  group: >-
+    ${{ github.event.label.name == 'claude-umsetzen'
+    && format('claude-issue-{0}', github.event.issue.number)
+    || format('ignoriert-{0}', github.run_id) }}
   cancel-in-progress: false
 
 jobs:
