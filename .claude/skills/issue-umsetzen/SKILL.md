@@ -39,6 +39,8 @@ Einen kurzen Plan als Kommentar im Issue posten: betroffene Dateien, Vorgehen, g
 
 ## 6. Abgeben
 
-- Pull Request gegen `main` mit der PR-Vorlage, `Closes #<nr>`, Checkliste ehrlich ausgefüllt.
+- Pull Request gegen `main` mit der PR-Vorlage und Checkliste ehrlich ausgefüllt.
+- Verweis auf das Issue: Standard `Bezug: #<nr>`, Issue bleibt offen. Akzeptanzkriterien hakt der Projektinhaber ab (CLAUDE.md, Regel 10). Im Pull Request steht zu jedem Kriterium, wie es erfüllt wurde.
+- **Nur bei Label `auto-schliessen`:** Jedes Kriterium einzeln gegen das Ergebnis prüfen, erfüllte im Issue abhaken und `Closes #<nr>` verwenden. Ist eines nicht erfüllt: offen lassen und `Bezug: #<nr>` verwenden.
 - Offene Punkte und Abweichungen im Abschnitt „Offene Punkte“ nennen.
 - Nicht selbst mergen.
