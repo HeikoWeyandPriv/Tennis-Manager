@@ -13,6 +13,19 @@ Matches werden in einer **Draufsicht** dargestellt. Jeder Punkt kann verfolgt we
 
 Die Darstellung erfindet keine Ereignisse; sie visualisiert ausschließlich, was die Logik berechnet hat.
 
+## Darstellung eines Ballwechsels
+
+Entschieden in Issue #34. Die Darstellung zeigt nur, was die Engine als Ereignisse liefert (siehe [ADR 0012](../architecture/adr/0012-ereignisliste-schnittstelle-engine-darstellung.md)).
+
+- **Reine Draufsicht.** Keine Seitenansicht, keine schräge Perspektive.
+- **Höhe über Ballgröße:** Je höher der Ball fliegt, desto größer wird er (näher am Beobachter), ein Lob zeigt sich also als deutlich größerer Ball.
+- **Aufsetzpunkt:** Ein kleiner Marker zeigt, wo der Ball den Boden berührt, auch außerhalb des Feldes. Das macht knappe Ausbälle erkennbar. Die Koordinate liefert die Engine; die Darstellung wählt sie nicht selbst.
+- **Schlagtyp erkennbar** über **Flugbahn, Farbe der Ballspur und Geschwindigkeit**. Es gibt keine zusätzlichen Formunterschiede.
+- **Ablauf pro Schlag:** Der Spieler läuft los, während der Ball fliegt. Kurz vor dem Ball holt er mit dem Schläger aus. Das Treffen des Balls oder das Nichterreichen ist die **Ankunft**.
+- **Aufschläge** werden normal durchgeführt und dargestellt, Fehler (Netz, Aus) sind zu sehen. Ein zweiter Aufschlag folgt wie im Tennis. Keine Sonderdarstellung.
+- **Punktende:** Der neue Spielstand wird über dem Platz eingeblendet. Die **Art des Punktendes** (Winner, Fehler, Ass) wird **nicht** zusätzlich angezeigt. Eine Schiedsrichteransage per Sound ist ein eigenes Thema (siehe [Offene Fragen](offene-fragen.md)).
+- **Spieler** werden von oben stark reduziert dargestellt; Schlägerschwung und Ballkontakt sind erkennbar.
+
 ## Taktik sichtbar machen
 
 Ziel: Der Spieler soll erkennen, **welche taktischen Mittel angewendet werden**.

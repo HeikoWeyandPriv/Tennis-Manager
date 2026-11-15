@@ -27,13 +27,25 @@ Getroffene Designentscheidungen mit kurzer Begründung. Neueste Einträge oben i
 | Changeover zeigt **Grundinformationen wie bei TV-Übertragungen**.                                                                                                                                                                       | Spieler soll das Match selbst lesen; tiefere Analysen später über Coaches.                                       |
 | **Gegnerische KI** wird später geklärt.                                                                                                                                                                                                 | Erst sollen Simulation, Taktik und Attribute stehen.                                                             |
 
+## Darstellung
+
+| Entscheidung                                                                                                                                                    | Begründung                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Ballwechsel in **reiner Draufsicht**; Höhe über Ballgröße, **Aufsetzer-Marker** am Aufsetzpunkt. Issue #34.                                                     | Einfach umzusetzen, passt zu „simple Regeln, taktisch komplexe Matches“; Marker macht knappe Ausbälle lesbar. |
+| **Schlagtyp** über Flugbahn, Farbe der Ballspur und Geschwindigkeit, **keine zusätzlichen Formunterschiede**. Issue #34.                                        | Reicht nach Einschätzung des Projektinhabers; Gegnerverhalten zeigt sich über wiederkehrende Muster.          |
+| Spieler läuft los, **während der Ball fliegt**, holt kurz vor dem Ball aus; Treffen oder Nichterreichen ist die **Ankunft**. Issue #34.                         | Wirkt wie echtes Tennis; das Ergebnis steht in der Logik schon fest.                                          |
+| **Aufschläge normal** dargestellt, Fehler sichtbar, keine Sonderdarstellung. Issue #34.                                                                         | Wie im Tennis.                                                                                                |
+| **Punktende:** neuer Spielstand über dem Platz eingeblendet, **keine zusätzliche Anzeige der Punktart**. Schiedsrichter-Sound ist ein eigenes Issue. Issue #34. | Wie im echten Tennis; der Schiedsrichter zeigt die Art ebenfalls nicht an.                                    |
+| **Spieler** von oben, stark reduziert; Schlägerschwung und Ballkontakt erkennbar. Issue #34.                                                                    | Schlag soll lesbar sein, ohne aufwendige Figuren.                                                             |
+
 ## Simulation
 
-| Entscheidung                                                                                                                   | Begründung                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| **Belag** (Sand, Rasen, Hartplatz) ist ein Parameter des Matches und wirkt auf die Ausführung der Schlagtypen; im MVP neutral. | Authentizität und taktische Tiefe sollen später ohne Umbau ergänzbar sein; im MVP weniger Balancing. |
-| **Zonenmodell** statt echter Ballphysik.                                                                                       | Weniger Aufwand, bessere taktische Lesbarkeit, leichter zu balancieren.                              |
-| **Schlagtypen** Power, Topspin, Slice, Stop, Lob; **Aufschlagtypen** Power, Kick, Slice.                                       | Mehr taktische Tiefe; jeder Typ hat eine erkennbare Flugkurve.                                       |
+| Entscheidung                                                                                                                                                 | Begründung                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| **Aufsetzpunkt** je Schlag als Koordinate aus der Engine (auch außerhalb des Feldes), Ereignisliste als Schnittstelle zur Darstellung (ADR 0012). Issue #34. | Die Darstellung erfindet nichts (ADR 0003); knappe Ausbälle brauchen einen genauen Punkt.            |
+| **Belag** (Sand, Rasen, Hartplatz) ist ein Parameter des Matches und wirkt auf die Ausführung der Schlagtypen; im MVP neutral.                               | Authentizität und taktische Tiefe sollen später ohne Umbau ergänzbar sein; im MVP weniger Balancing. |
+| **Zonenmodell** statt echter Ballphysik.                                                                                                                     | Weniger Aufwand, bessere taktische Lesbarkeit, leichter zu balancieren.                              |
+| **Schlagtypen** Power, Topspin, Slice, Stop, Lob; **Aufschlagtypen** Power, Kick, Slice.                                                                     | Mehr taktische Tiefe; jeder Typ hat eine erkennbare Flugkurve.                                       |
 
 ## Taktik
 
