@@ -68,7 +68,10 @@ Die Energie des Gegners ist verborgen (siehe [03 Energie & Momentum](03-energie-
 - Eigene Energie (Balken)
 - Momentum-Leiste (gemeinsam für beide Spieler)
 - Ansichtsmodus-Wahl (während des Matches wechselbar)
-- Geschwindigkeitsregler
+- Geschwindigkeitsregler (Stufen 1x, 1,25x, 1,5x, 2x, 4x; jederzeit wechselbar; gilt nur pro Match)
+- Pause/Weiter (jederzeit; nur Pause und Weiter, keine Taktikänderung)
+
+Der Regler skaliert die gesamte zeitliche Darstellung gemeinsam, also auch die Wartezeiten zwischen den Punkten. 1x entspricht etwa der realen Geschwindigkeit eines Ballwechsels; Regeln siehe [Geschwindigkeit und Pause in 01 Match-Loop](01-match-loop.md#geschwindigkeit-und-pause). Was zwischen den Ballwechseln passiert, wird in Issue #56 geklärt.
 
 ## Changeover-Bildschirm
 

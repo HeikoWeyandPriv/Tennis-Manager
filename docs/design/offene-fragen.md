@@ -6,7 +6,6 @@
 - **Druck-Mechanik:** Wie wirkt die Wichtigkeit eines Punktes auf die Ausführung (Dämpfung durch die Lage, Bezug auf den einzelnen Spieler, Wirkung je mentaler Stärke)? Wird in Issue #38 geklärt.
 - **Weitere Zählformate:** Die Variante „Standard“ ist festgelegt (zwei Gewinnsätze, Tiebreak in allen Sätzen, Einstand mit Vorteil). Offen: Welche realen Turnierformate kommen dazu (andere Gewinnsätze, Games pro Satz, Tiebreak-Punkte), und wie wird einem Match sein Zählformat zugeordnet, z. B. über das Turnier?
 - **Herkunft der Attribute im fertigen Spiel:** Im MVP gibt es drei Archetypen und eine Einstiegsmaske (siehe [05 Attribute](05-attribute.md)). Im fertigen Spiel kommen die Attribute aus dem Spielkontext; offen ist, woher sie dort konkret kommen (Karriere, Turnier, vorbereitete Profile) und ob die Maske bleibt. Der Match-Start wird in Issue #35 geklärt.
-- **Matchdauer und Animationstempo:** Wie lange darf ein Match im Modus „alle Punkte“ maximal dauern?
 
 ## Darstellung
 
@@ -22,6 +21,8 @@
 
 - **Optimaler Schlagort:** Ob die Darstellung einen „optimalen Schlagort“ (Koordinate, zu der der Spieler läuft) kennt und wie sich daraus die Ankunft ergibt, ist offen. Wird in Issue #51 entschieden.
 - **Zonenmodell:** Bleiben die 3 × 3 Zielzonen, oder werden sie durch Koordinaten ersetzt? Issue #51. Der Aufsetzpunkt als Koordinate gilt unabhängig davon.
+- **Globale Einstellung für das Animationstempo:** Im MVP gilt die Stufe nur pro Match. Offen ist, ob sie später als globale Spieleinstellung gespeichert wird (würde die Persistenz berühren, ADR 0007).
+- **Richtwert für die Matchdauer:** Bewusst kein Zeitziel im MVP; ob und welcher Richtwert später gilt, wird nach dem ersten spielbaren Prototyp aus gemessener Spielzeit abgeleitet.
 - **Sound:** Schiedsrichteransage des Spielstands und weitere Geräusche kommen im Design noch nicht vor; eigenes Issue.
 - **Optional später:** Händigkeit und Rückhandtyp könnten sich in der Spielerfigur zeigen (kein MVP-Muss, nicht entschieden).
 
