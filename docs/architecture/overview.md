@@ -22,6 +22,7 @@ Zusammenfassung des aktuellen Stands. Die Begründungen stehen in den [ADRs](adr
 | Persistenz        | IndexedDB (Dexie), Export/Import, versionierte Spielstände  | [0007](adr/0007-persistenz-indexeddb-export-versionierung.md) |
 | Tests             | Vitest, fast-check, Playwright, ESLint, Prettier            | [0008](adr/0008-teststrategie.md)                             |
 | Auslieferung      | Statisch, ohne Backend; Art der Auslieferung zurückgestellt | [0009](adr/0009-statische-anwendung-ohne-backend.md)          |
+| Automatisierung   | Claude-Action, ausgelöst per Label `claude-umsetzen`        | [0010](adr/0010-automatische-issue-umsetzung.md)              |
 
 ## Bausteine
 

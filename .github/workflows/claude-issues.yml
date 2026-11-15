@@ -1,0 +1,51 @@
+name: Claude setzt Issue um
+
+# Startet nur, wenn der Projektinhaber das Label `claude-umsetzen` setzt.
+# Design- und Klärungs-Issues erhalten dieses Label nicht (siehe ADR 0010).
+on:
+  issues:
+    types: [labeled]
+
+concurrency:
+  group: claude-issue-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  umsetzen:
+    name: Issue umsetzen
+    if: >-
+      github.event.label.name == 'claude-umsetzen' &&
+      github.event.sender.login == github.repository_owner &&
+      !contains(github.event.issue.labels.*.name, 'braucht-entscheidung')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Abhängigkeiten installieren
+        run: pnpm install --frozen-lockfile
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Setze Issue #${{ github.event.issue.number }} um.
+            Nutze dazu den Skill `issue-umsetzen` und beachte alle Pflichtregeln aus CLAUDE.md.
+            Ist etwas unklar oder widerspricht das Issue dem Design, frage im Issue nach,
+            setze das Label `braucht-entscheidung` und beende den Lauf ohne Code.
+            Öffne am Ende einen Pull Request gegen `main`. Nicht selbst mergen.
+          claude_args: >-
+            --max-turns 60
+            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(git:*),Bash(gh:*),Bash(pnpm:*)"

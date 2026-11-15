@@ -59,3 +59,4 @@ Die CI führt bei jedem Pull Request Formatierung, Typprüfung, Lint, Tests und 
 - **Alle Entscheidungen landen als Datei im Repository**: Designentscheidungen in `docs/design/`, Architekturentscheidungen als ADR in `docs/architecture/adr/`.
 - **`main` ist geschützt.** Änderungen gelangen nur über Pull Requests dorthin.
 - Die Umsetzung erfolgt weitgehend agentisch mit Claude Code. Die Regeln dafür stehen in [`CLAUDE.md`](CLAUDE.md).
+- **Automatische Umsetzung:** Aufgaben-Issues mit dem Label `claude-umsetzen` setzt Claude per GitHub Action um und öffnet einen Pull Request ([ADR 0010](docs/architecture/adr/0010-automatische-issue-umsetzung.md)). Entscheidungs-Issues (`braucht-entscheidung`) werden weiterhin mit Claude Code besprochen.
