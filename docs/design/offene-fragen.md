@@ -8,6 +8,10 @@
 - **Beispielspieler im MVP:** Die Attribute beider Spieler sind vor dem Match einstellbar. Offen: Gibt es zusätzlich vorbereitete Spielerprofile als Startwerte (Paarung, Stärkeverhältnis, Händigkeit, mentale Startwerte)? Im fertigen Spiel kommen die Attribute aus dem Spielkontext (siehe [05 Attribute](05-attribute.md)); offen ist, woher sie dort konkret kommen (Karriere, Turnier, vorbereitete Profile). Der Match-Start wird in Issue #35 geklärt.
 - **Matchdauer und Animationstempo:** Wie lange darf ein Match im Modus „alle Punkte“ maximal dauern?
 
+## Darstellung
+
+- **Kommentarzeile nach dem MVP:** Textbausteine und Mustererkennung für Ballwechsel, inklusive Kommentare wie „wirkt müde“ (siehe [06 Darstellung](06-darstellung.md)). Im MVP nicht enthalten.
+
 ## Simulation
 
 - **Wirkung der Beläge:** Sand, Rasen und Hartplatz beeinflussen die Ausführung der Schlagtypen (siehe [02 Punktsimulation](02-punktsimulation.md)). Offen: Wie stark wirkt jeder Belag je Typ? Beeinflusst der Belag zusätzlich Ankunft, Laufwege oder Energieverbrauch? Wie wird einem Match sein Belag zugeordnet, z. B. über das Turnier?

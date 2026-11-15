@@ -27,12 +27,26 @@ Ziel: Der Spieler soll erkennen, **welche taktischen Mittel angewendet werden**.
 
 Einblendungen und Kommentarzeile sind **abschaltbar**.
 
+### Umfang im MVP
+
+Die Taktik des Gegners wird über sein **sichtbares Verhalten** erkennbar, z. B. über die verwendeten Schlagtypen. Gezeigt wird nur, was gespielt wurde, nie die eingestellte Tendenz.
+
+| Mittel                  | MVP                                                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------------------------------- |
+| Positionen              | ja                                                                                                    |
+| Flugkurven je Schlagtyp | ja                                                                                                    |
+| Farbige Ballspuren      | ja                                                                                                    |
+| Einblendungen           | ja, **standardmäßig an**, für **beide Spieler**, abschaltbar                                          |
+| Kommentarzeile          | nein, folgt nach dem MVP (siehe [Offene Fragen](offene-fragen.md)); abschaltbar, sobald sie existiert |
+
+Die konkrete Darstellung eines Ballwechsels (Bedeutung der Ballspur-Farben, Dauer und Ort der Einblendungen, Ablauf der Animation) wird in Issue #34 festgelegt.
+
 ## Indirekte Ermüdungshinweise
 
 Die Energie des Gegners ist verborgen (siehe [03 Energie & Momentum](03-energie-momentum.md)). Sie wird indirekt sichtbar über:
 
-- langsamere Laufanimationen
-- Kommentare wie „wirkt müde“
+- langsamere Laufanimationen (im MVP der einfache Ermüdungshinweis)
+- Kommentare wie „wirkt müde“ (gehören zur Kommentarzeile, folgen nach dem MVP)
 - steigende Fehlerzahlen in den Statistiken
 
 ## Weitere UI-Elemente im Match
