@@ -28,3 +28,26 @@ Browserbasierter Tennis-Manager. Man steuert die Karriere eines einzelnen Spiele
 2. **Keine konkreten Zahlen in den Designdokumenten.** Designdokumente beschreiben das _Was_ und _Warum_. Zahlenwerte gehören in [Balancing](balancing.md) und später in Konfigurationsdateien.
 3. **Entscheidungen werden im [Entscheidungslog](entscheidungslog.md) festgehalten**, besonders wenn etwas bewusst verworfen wurde.
 4. **Begriffe aus dem [Glossar](glossar.md) werden einheitlich verwendet.**
+
+## Umsetzungsplan und Definition „MVP spielbar“
+
+Festgelegt in Issue #50.
+
+**MVP spielbar:** Das MVP berechnet und zeigt ein **vollständiges Match** – Match-Start mit der bereits designten Spielerauswahl (Archetypen und Attribut-Editor, siehe [05 Attribute](05-attribute.md)), Spielen mit Taktik-Reglern am Changeover und Ergebnisbildschirm. **Beide Spieler** sind über dieselbe Maske einstellbar (Standardgegner: Aufschlagriese). **Sound ist nicht Teil des MVP.**
+
+**Reihenfolge:** Die Meilensteine bauen aufeinander auf und werden **strikt nacheinander** gebaut und vom Projektinhaber abgenommen (M1 → M2 → … → M8). So ist jeder Meilenstein für sich prüfbar, bevor der nächste beginnt. „MVP spielbar“ ist erreicht mit M1 bis M7; M8 (Hosting) folgt für Tests.
+
+| Meilenstein                          | Inhalt                                                       | Offene Voraussetzungen (Entscheidungen/Aufgaben) |
+| ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------ |
+| M1 Engine-Kern                       | Zählung, Zustand, Zufall mit Seed, Konfiguration             | #49, #22                                         |
+| M2 Punktsimulation                   | Schritte, Rechenmodell, Massensimulation                     | #42, #43 (Zielgrößen), #51                       |
+| M3 Dynamik                           | Energie, Momentum, Wichtigkeit, Druck, Tendenzen             | #38, #44, #45                                    |
+| M4 Match-Darstellung                 | Platz, Ballwechsel, Tempo, Einblendungen                     | #46, #51, #56                                    |
+| M5 Oberfläche (inkl. Spielerauswahl) | Match-Start, Spielerauswahl, Changeover, Ergebnisbildschirm  | #35, #47                                         |
+| M6 Entwicklermodus                   | Wahrscheinlichkeiten und Einflüsse anzeigen                  | #42                                              |
+| M7 Balancing                         | Zielgrößen, Feinjustierung (braucht M6 und Massensimulation) | #43                                              |
+| M8 Hosting                           | Auslieferung für Tests                                       | #48                                              |
+
+Stand der Voraussetzungen: Bereits geschlossen und damit keine Voraussetzung mehr sind #7, #9, #11, #14, #15 und #34.
+
+**Freigabe von Code-Issues:** Code-Issues eines Meilensteins entstehen, sobald **alle** seine Voraussetzungen entschieden und in die Dokumentation übernommen sind **und** der Vorgänger-Meilenstein vom Projektinhaber abgenommen ist (CLAUDE.md, Regel 10). Es gibt keine globale Design-Phase mehr. Entscheidungen späterer Meilensteine dürfen parallel geklärt werden, solange frühere Meilensteine gebaut werden.

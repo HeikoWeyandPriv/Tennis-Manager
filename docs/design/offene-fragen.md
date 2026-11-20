@@ -22,7 +22,7 @@
 - **Zonenmodell:** Bleiben die 3 × 3 Zielzonen, oder werden sie durch Koordinaten ersetzt? Issue #51. Der Aufsetzpunkt als Koordinate gilt unabhängig davon.
 - **Globale Einstellung für das Animationstempo:** Im MVP gilt die Stufe nur pro Match. Offen ist, ob sie später als globale Spieleinstellung gespeichert wird (würde die Persistenz berühren, ADR 0007).
 - **Richtwert für die Matchdauer:** Bewusst kein Zeitziel im MVP; ob und welcher Richtwert später gilt, wird nach dem ersten spielbaren Prototyp aus gemessener Spielzeit abgeleitet.
-- **Sound:** Schiedsrichteransage des Spielstands und weitere Geräusche kommen im Design noch nicht vor; eigenes Issue.
+- **Sound:** Im MVP nicht enthalten (Issue #50). Schiedsrichteransage des Spielstands und weitere Geräusche kommen im Design noch nicht vor; eigenes Issue nach dem MVP.
 - **Optional später:** Händigkeit und Rückhandtyp könnten sich in der Spielerfigur zeigen (kein MVP-Muss, nicht entschieden).
 
 ## Später
