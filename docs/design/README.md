@@ -35,19 +35,30 @@ Festgelegt in Issue #50.
 
 **MVP spielbar:** Das MVP berechnet und zeigt ein **vollständiges Match** – Match-Start mit der bereits designten Spielerauswahl (Archetypen und Attribut-Editor, siehe [05 Attribute](05-attribute.md)), Spielen mit Taktik-Reglern am Changeover und Ergebnisbildschirm. **Beide Spieler** sind über dieselbe Maske einstellbar (Standardgegner: Aufschlagriese). **Sound ist nicht Teil des MVP.**
 
-**Reihenfolge:** Die Meilensteine bauen aufeinander auf und werden **strikt nacheinander** gebaut und vom Projektinhaber abgenommen (M1 → M2 → … → M8). So ist jeder Meilenstein für sich prüfbar, bevor der nächste beginnt. „MVP spielbar“ ist erreicht mit M1 bis M7; M8 (Hosting) folgt für Tests.
+**Reihenfolge:** Die Meilensteine bauen aufeinander auf. Die Reihenfolge M1 → M2 → … → M8 ist eine **Empfehlung**; der Projektinhaber steuert die Abarbeitung und weicht bewusst davon ab, wenn es sinnvoll ist. Der Plan dient dazu, die richtige Reihenfolge einzuhalten und erkennbare Abschnitte zu haben. Jeder Meilenstein hat ein **Abnahme-Issue** mit einer Prüfliste (3 bis 5 prüfbare Punkte), die der Projektinhaber abhakt; sie sperrt den nächsten Meilenstein nicht. „MVP spielbar“ ist erreicht mit M1 bis M7; M8 (Hosting) folgt für Tests.
 
-| Meilenstein                          | Inhalt                                                       | Offene Voraussetzungen (Entscheidungen/Aufgaben) |
-| ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------ |
-| M1 Engine-Kern                       | Zählung, Zustand, Zufall mit Seed, Konfiguration             | #49, #22                                         |
-| M2 Punktsimulation                   | Schritte, Rechenmodell, Massensimulation                     | #42, #43 (Zielgrößen), #51                       |
-| M3 Dynamik                           | Energie, Momentum, Wichtigkeit, Druck, Tendenzen             | #38, #44, #45                                    |
-| M4 Match-Darstellung                 | Platz, Ballwechsel, Tempo, Einblendungen                     | #46, #51, #56                                    |
-| M5 Oberfläche (inkl. Spielerauswahl) | Match-Start, Spielerauswahl, Changeover, Ergebnisbildschirm  | #35, #47                                         |
-| M6 Entwicklermodus                   | Wahrscheinlichkeiten und Einflüsse anzeigen                  | #42                                              |
-| M7 Balancing                         | Zielgrößen, Feinjustierung (braucht M6 und Massensimulation) | #43                                              |
-| M8 Hosting                           | Auslieferung für Tests                                       | #48                                              |
+**Abnahme-Artefakte:** Jeder Meilenstein liefert etwas, das der Projektinhaber ohne Code lesen kann. Ab M2 sind das ein **Massentest-Bericht** und **einzelne Matches als lesbares Textprotokoll** (Skripte in `tools/`, Grundlage ist die Ereignisliste aus [ADR 0012](../architecture/adr/0012-ereignisliste-schnittstelle-engine-darstellung.md)).
+
+**Festlegungen aus der Überprüfung des Plans (Issue #63):**
+
+- M2 enthält eine **grobe Plausibilitätsprüfung** mit Zielkorridoren (z. B. Aufschlagquote, Matchlänge, Stärkeverhältnis), damit ein untaugliches Rechenmodell vor M3 auffällt. Das Feinbalancing bleibt M7.
+- M3 enthält die **Statistik-Erfassung** (Engine-Logik); die Anzeige gehört zu M5.
+- M4 wird nur für **Desktop** gebaut und mit **festen, vorgewählten Tendenzen** geprüft; die Einstellbarkeit der Tendenzen folgt in M5. Die Plattform-Entscheidung #47 wird danach geprüft.
+- M5 bleibt ein Meilenstein, intern in Tickets gestaffelt; abgenommen wird am Ende.
+- M7 enthält die Kennzahl **Taktik-Wirksamkeit**: Eine passende Taktik verschiebt das Ergebnis messbar, aber keine Taktik gewinnt immer.
+- **Persistenz im MVP:** Es werden nur Einstellungen gespeichert, kein Match-Spielstand (betrifft #49).
+
+| Meilenstein                          | Inhalt                                                                      | Offene Voraussetzungen (Entscheidungen/Aufgaben) |
+| ------------------------------------ | --------------------------------------------------------------------------- | ------------------------------------------------ |
+| M1 Engine-Kern                       | Zählung, Zustand, Zufall mit Seed, Konfiguration                            | #49, #22                                         |
+| M2 Punktsimulation                   | Schritte, Rechenmodell, Massentest und Textprotokoll, Plausibilitätsprüfung | #42, #43 (Zielgrößen), #51                       |
+| M3 Dynamik                           | Energie, Momentum, Wichtigkeit, Druck, Tendenzen, Statistik-Erfassung       | #38, #44, #45                                    |
+| M4 Match-Darstellung                 | Platz, Ballwechsel, Tempo, Einblendungen (nur Desktop, feste Tendenzen)     | #46, #51, #56                                    |
+| M5 Oberfläche (inkl. Spielerauswahl) | Match-Start, Spielerauswahl, Changeover, Ergebnisbildschirm                 | #35, #47                                         |
+| M6 Entwicklermodus                   | Wahrscheinlichkeiten und Einflüsse anzeigen                                 | #42                                              |
+| M7 Balancing                         | Zielgrößen, Feinjustierung, Taktik-Wirksamkeit (braucht M6 und Massentest)  | #43                                              |
+| M8 Hosting                           | Auslieferung für Tests                                                      | #48                                              |
 
 Stand der Voraussetzungen: Bereits geschlossen und damit keine Voraussetzung mehr sind #7, #9, #11, #14, #15 und #34.
 
-**Freigabe von Code-Issues:** Code-Issues eines Meilensteins entstehen, sobald **alle** seine Voraussetzungen entschieden und in die Dokumentation übernommen sind **und** der Vorgänger-Meilenstein vom Projektinhaber abgenommen ist (CLAUDE.md, Regel 10). Es gibt keine globale Design-Phase mehr. Entscheidungen späterer Meilensteine dürfen parallel geklärt werden, solange frühere Meilensteine gebaut werden.
+**Freigabe von Code-Issues:** Code-Issues eines Meilensteins entstehen, sobald **alle** seine Voraussetzungen entschieden und in die Dokumentation übernommen sind **und** der Projektinhaber das Issue zur Umsetzung freigibt; die Abnahme des Vorgänger-Meilensteins ist dafür eine Empfehlung, keine Sperre (CLAUDE.md, Regel 10 regelt das Schließen von Issues). Es gibt keine globale Design-Phase mehr. Entscheidungen späterer Meilensteine dürfen parallel geklärt werden, solange frühere Meilensteine gebaut werden.
