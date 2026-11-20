@@ -41,23 +41,24 @@ Festgelegt in Issue #50.
 
 **Festlegungen aus der Überprüfung des Plans (Issue #63):**
 
+- M1 enthält zusätzlich die **Wichtigkeit von Punkten** und die **Auslöser für Changeover und Satzpause** (beides folgt allein aus dem Spielstand), eine **Test-Punktquelle** (Platzhalter, Zufall aus dem Seed) und ein **Skript, das ein Beispielmatch als lesbaren Spielstandverlauf ausgibt**. Das Zählformat bleibt bei den drei dokumentierten Parametern; weitere reale Formate folgen später. Alle sieben Voraussetzungen von M1 sind vor dem ersten M1-Code abgeschlossen (Issue #73).
 - M2 enthält eine **grobe Plausibilitätsprüfung** mit Zielkorridoren (z. B. Aufschlagquote, Matchlänge, Stärkeverhältnis), damit ein untaugliches Rechenmodell vor M3 auffällt. Das Feinbalancing bleibt M7.
 - M3 enthält die **Statistik-Erfassung** (Engine-Logik); die Anzeige gehört zu M5.
 - M4 wird nur für **Desktop** gebaut und mit **festen, vorgewählten Tendenzen** geprüft; die Einstellbarkeit der Tendenzen folgt in M5. Die Plattform-Entscheidung #47 wird danach geprüft.
 - M5 bleibt ein Meilenstein, intern in Tickets gestaffelt; abgenommen wird am Ende.
 - M7 enthält die Kennzahl **Taktik-Wirksamkeit**: Eine passende Taktik verschiebt das Ergebnis messbar, aber keine Taktik gewinnt immer.
-- **Persistenz im MVP:** Es werden nur Einstellungen gespeichert, kein Match-Spielstand (betrifft #49).
+- **Persistenz im MVP:** Es werden nur Einstellungen gespeichert, kein Match-Spielstand. #49 beschränkt sich auf das Format der Balancing-Werte (M1); die Persistenz der Einstellungen wird in #79 entschieden (M5).
 
-| Meilenstein                          | Inhalt                                                                      | Offene Voraussetzungen (Entscheidungen/Aufgaben) |
-| ------------------------------------ | --------------------------------------------------------------------------- | ------------------------------------------------ |
-| M1 Engine-Kern                       | Zählung, Zustand, Zufall mit Seed, Konfiguration                            | #49, #22                                         |
-| M2 Punktsimulation                   | Schritte, Rechenmodell, Massentest und Textprotokoll, Plausibilitätsprüfung | #42, #43 (Zielgrößen), #51                       |
-| M3 Dynamik                           | Energie, Momentum, Wichtigkeit, Druck, Tendenzen, Statistik-Erfassung       | #38, #44, #45                                    |
-| M4 Match-Darstellung                 | Platz, Ballwechsel, Tempo, Einblendungen (nur Desktop, feste Tendenzen)     | #46, #51, #56                                    |
-| M5 Oberfläche (inkl. Spielerauswahl) | Match-Start, Spielerauswahl, Changeover, Ergebnisbildschirm                 | #35, #47                                         |
-| M6 Entwicklermodus                   | Wahrscheinlichkeiten und Einflüsse anzeigen                                 | #42                                              |
-| M7 Balancing                         | Zielgrößen, Feinjustierung, Taktik-Wirksamkeit (braucht M6 und Massentest)  | #43                                              |
-| M8 Hosting                           | Auslieferung für Tests                                                      | #48                                              |
+| Meilenstein                          | Inhalt                                                                                                                                                      | Offene Voraussetzungen (Entscheidungen/Aufgaben) |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| M1 Engine-Kern                       | Zählung, Wichtigkeit und Changeover-Auslöser, Zustand, Zufall mit Seed, Konfiguration (Zählformat, Wichtigkeit), Test-Punktquelle, Spielstandverlauf-Skript | #49 (nur Format), #22, #74, #75, #76, #77, #78   |
+| M2 Punktsimulation                   | Schritte, Rechenmodell, Massentest und Textprotokoll, Plausibilitätsprüfung                                                                                 | #42, #43 (Zielgrößen), #51                       |
+| M3 Dynamik                           | Energie, Momentum, Druck, Tendenzen, Statistik-Erfassung                                                                                                    | #38, #44, #45                                    |
+| M4 Match-Darstellung                 | Platz, Ballwechsel, Tempo, Einblendungen (nur Desktop, feste Tendenzen)                                                                                     | #46, #51, #56                                    |
+| M5 Oberfläche (inkl. Spielerauswahl) | Match-Start, Spielerauswahl, Changeover, Ergebnisbildschirm                                                                                                 | #35, #47, #79                                    |
+| M6 Entwicklermodus                   | Wahrscheinlichkeiten und Einflüsse anzeigen                                                                                                                 | #42                                              |
+| M7 Balancing                         | Zielgrößen, Feinjustierung, Taktik-Wirksamkeit (braucht M6 und Massentest)                                                                                  | #43                                              |
+| M8 Hosting                           | Auslieferung für Tests                                                                                                                                      | #48                                              |
 
 Stand der Voraussetzungen: Bereits geschlossen und damit keine Voraussetzung mehr sind #7, #9, #11, #14, #15 und #34.
 
