@@ -1,6 +1,6 @@
 # 0011 – Entscheidungs-Issues per Label klären und in die Dokumentation übernehmen
 
-- **Status:** vorgeschlagen
+- **Status:** angenommen
 - **Datum:** 2026-11-15
 - **Issue:** #31
 
