@@ -1,6 +1,6 @@
 # 0010 – Automatische Issue-Umsetzung per GitHub Action
 
-- **Status:** vorgeschlagen
+- **Status:** angenommen
 - **Datum:** 2026-11-15
 - **Issue:** #23
 

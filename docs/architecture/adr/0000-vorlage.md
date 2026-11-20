@@ -2,7 +2,8 @@
 
 - **Status:** vorgeschlagen
 - **Datum:** JJJJ-MM-TT
-- **Issue:** #
+- **Issue:** # (Klärungs-Issue, Pflicht)
+- **Offene Klärung:** – (Issue-Nummer, falls noch eine Frage offen ist; sonst „–“)
 
 ## Kontext
 

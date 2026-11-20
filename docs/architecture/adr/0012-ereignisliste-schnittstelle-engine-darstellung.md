@@ -1,8 +1,9 @@
 # 0012 – Ereignisliste als Schnittstelle zwischen Engine und Darstellung
 
-- **Status:** vorgeschlagen
+- **Status:** angenommen
 - **Datum:** 2026-11-15
 - **Issue:** #34
+- **Offene Klärung:** #51 (Zonenmodell); berührt auch #74 (Engine-Schnittstelle und Ereignisse)
 
 ## Kontext
 
@@ -23,6 +24,11 @@ Die genaue Form der Koordinaten und ein möglicher **optimaler Schlagort** sind 
 
 - Hält ADR 0003 ein: Engine deterministisch, Darstellung zeigt nur Berechnetes.
 - Der Aufsetzpunkt wird einmal gewürfelt und lässt sich über Seed und Zustand exakt nachstellen.
+
+## Geltungsbereich
+
+- **Gilt bereits:** Ereignisliste je Punkt, Pflichtfelder je Schlag, Aufsetzpunkt als Koordinate (auch außerhalb des Feldes), Darstellung nutzt nur diese Werte.
+- **Folgt nach #51:** genaue Form der Koordinaten und optimaler Schlagort; der ADR wird dann ergänzt.
 
 ## Konsequenzen
 
